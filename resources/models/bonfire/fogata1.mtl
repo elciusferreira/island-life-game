@@ -1,0 +1,24 @@
+newmtl lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd tronco diffuse.jpg
+bump normal tronco.jpg -bm -0.213675
+Ni 1.00
+newmtl lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd fogata1 diffuse.jpg
+bump tronco1.jpg -bm -0.213675
+Ni 1.00
+newmtl lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd piedra diffuse.jpg
+bump piedra normal.jpg -bm 0.042735
+Ni 1.00

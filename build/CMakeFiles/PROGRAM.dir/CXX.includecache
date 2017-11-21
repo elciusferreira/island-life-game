@@ -1136,7 +1136,7 @@ intrin.h
 arm_neon.h
 -
 
-/home/elcius/Documentos/Git/pessoal/island-life-game/src/main.cpp
+/home/elcius/Documentos/github/pessoal/island-life-game/src/main.cpp
 string
 -
 GL/glew.h
@@ -1144,13 +1144,13 @@ GL/glew.h
 GLFW/glfw3.h
 -
 Shader.h
-/home/elcius/Documentos/Git/pessoal/island-life-game/src/Shader.h
+/home/elcius/Documentos/github/pessoal/island-life-game/src/Shader.h
 Camera.h
-/home/elcius/Documentos/Git/pessoal/island-life-game/src/Camera.h
+/home/elcius/Documentos/github/pessoal/island-life-game/src/Camera.h
 Skybox.h
-/home/elcius/Documentos/Git/pessoal/island-life-game/src/Skybox.h
+/home/elcius/Documentos/github/pessoal/island-life-game/src/Skybox.h
 Model.h
-/home/elcius/Documentos/Git/pessoal/island-life-game/src/Model.h
+/home/elcius/Documentos/github/pessoal/island-life-game/src/Model.h
 glm/glm.hpp
 -
 glm/gtc/matrix_transform.hpp

@@ -64,7 +64,7 @@ int main()
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-    GLFWwindow* window = glfwCreateWindow(screenWidth, screenHeight, "Project Helios", nullptr, nullptr); // Windowed
+    GLFWwindow* window = glfwCreateWindow(screenWidth, screenHeight, "Island Life - The Game", nullptr, nullptr); // Windowed
 
     glfwMakeContextCurrent(window);
 
@@ -190,7 +190,9 @@ skyboxShader.setInt("skybox", 0);
     // Load Models
     //Model Map("resources/models/prisao.obj");
 		Model Statue("resources/models/EasterIslandStatue.obj");
-		Model Wood("resources/models/EasterIslandStatue.obj");
+		Model Bonfire("resources/models/bonfire.obj");
+		Model Wood("resources/models/wood.obj");
+		std::cout << "CHEGOU AQUI" << '\n';
     Model Island("resources/models/Small_Tropical_Island.obj");
     Model Lamp("resources/models/Lamp.obj");
     Model Lamp2("resources/models/Lamp.obj");
@@ -257,6 +259,7 @@ skyboxShader.setInt("skybox", 0);
         //glm::mat4 model_map;
 				glm::mat4 model_island;
 				glm::mat4 model_statue;
+				glm::mat4 model_bonfire;
 				glm::mat4 model_wood;
         glm::mat4 model_lamp;
         glm::mat4 model_lamp2;
@@ -278,8 +281,12 @@ skyboxShader.setInt("skybox", 0);
 				model_statue = glm::translate(model_statue, glm::vec3(0.0f, -2.5f, 2.0f));
 				model_statue = glm::rotate(model_statue, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
-				model_wood = glm::translate(model_wood, glm::vec3(-0.34f, -1.9f, -4.0f));
-				model_wood = glm::rotate(model_wood, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+				model_bonfire = glm::translate(model_bonfire, glm::vec3(0.81f, -2.7f, -3.7f));
+				model_bonfire = glm::scale(model_bonfire, glm::vec3(0.15f, 0.15f, 0.15f));
+				//model_wood = glm::rotate(model_wood, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+
+				model_wood = glm::translate(model_wood, glm::vec3(0.26f, -1.8f, -8.3f));
+				model_wood = glm::scale(model_wood, glm::vec3(0.15f, 0.15f, 0.15f));
 
 				model_lamp = glm::translate(model_lamp, glm::vec3(1.5f, -3.2f, 2.0f));
 				model_lamp = glm::rotate(model_lamp, glm::radians(0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
@@ -345,6 +352,14 @@ skyboxShader.setInt("skybox", 0);
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 1.0f, 1.0f, 1.0f);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
         Statue.Draw(lightingShader);
+
+				lightingShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_bonfire));
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+        Bonfire.Draw(lightingShader);
 
 				lightingShader.Use();
 				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_wood));

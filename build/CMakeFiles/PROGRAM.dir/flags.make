@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++11 -g -Wall
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/elcius/Documentos/Git/pessoal/island-life-game/include -I/home/elcius/Documentos/Git/pessoal/island-life-game/textures -I/home/elcius/Documentos/Git/pessoal/island-life-game/shaders 
+CXX_INCLUDES = -I/home/elcius/Documentos/github/pessoal/island-life-game/include -I/home/elcius/Documentos/github/pessoal/island-life-game/textures -I/home/elcius/Documentos/github/pessoal/island-life-game/shaders 
 

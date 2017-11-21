@@ -1,4 +1,4 @@
-# Install script for directory: /home/elcius/Documentos/Git/pessoal/island-life-game
+# Install script for directory: /home/elcius/Documentos/github/pessoal/island-life-game
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/elcius/Documentos/Git/pessoal/island-life-game/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/elcius/Documentos/github/pessoal/island-life-game/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
