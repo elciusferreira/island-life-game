@@ -1,0 +1,1 @@
+/usr/bin/clang++   -std=c++11  -Wall   CMakeFiles/PROGRAM.dir/src/main.cpp.o  -o PROGRAM  -L/home/elcius/Documentos/P7/CG/ICG-Final-Project/lib -rdynamic /usr/local/lib/libglfw3.a -lX11 -lXrandr -lXinerama -lXi -lXxf86vm -lXcursor -lGL -ldl -lpthread -lGLEW -lSOIL -lassimp -Wl,-rpath,/home/elcius/Documentos/P7/CG/ICG-Final-Project/lib 

@@ -1,0 +1,6 @@
+make
+sudo apt-get install clang
+make
+sudo apt-get install libsoil-dev
+make
+./build/PROGRAM 
