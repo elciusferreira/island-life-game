@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/elcius/Documentos/P7/CG/ICG-Final-Project/src/main.cpp" "/home/elcius/Documentos/P7/CG/ICG-Final-Project/build/CMakeFiles/PROGRAM.dir/src/main.cpp.o"
+  "/home/elcius/Documentos/Git/pessoal/island-life-game/src/main.cpp" "/home/elcius/Documentos/Git/pessoal/island-life-game/build/CMakeFiles/PROGRAM.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
