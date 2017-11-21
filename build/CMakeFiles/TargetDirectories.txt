@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/edit_cache.dir
 /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/rebuild_cache.dir
 /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/PROGRAM.dir
+=======
+/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/rebuild_cache.dir
+/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/PROGRAM.dir
+/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/edit_cache.dir
+>>>>>>> 68cb6c12585288b7007681d767be0c3a2682695e

@@ -24,7 +24,7 @@ enum Camera_Movement {
 const GLfloat YAW        =  -90.0f;
 const GLfloat PITCH      =  0.0f;
 const GLfloat SPEED      =  4.0f;
-const GLfloat SENSITIVTY =  0.2f;
+const GLfloat SENSITIVTY =  0.3f;
 const GLfloat ZOOM       =  45.0f;
 
 
@@ -74,6 +74,8 @@ public:
     // Processes input received from any keyboard-like input system. Accepts input parameter in the form of camera defined ENUM (to abstract it from windowing systems)
     void ProcessKeyboard(Camera_Movement direction, GLfloat deltaTime, GLfloat offsetY, GLboolean Colision = true)
     {
+        float last_x = this->Position.x;
+        float last_z = this->Position.y;
         GLfloat velocity = this->MovementSpeed * deltaTime;
         if (direction == FORWARD)
             this->Position += velocity * this->Front;
@@ -87,6 +89,11 @@ public:
         if (direction == RIGHT)
             this->Position += glm::normalize(glm::cross(this->Front, this->Up)) * velocity;
             //this->Position += this->Right * velocity;
+
+        if(this->Position.y >= 0.8)
+            this->Position.y = 0.8;
+        if(this->Position.y <= -1)
+            this->Position.y = -1;
 
             /*if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
                 cameraPos += cameraSpeed * cameraFront;

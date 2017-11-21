@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -1136,14 +1136,27 @@ intrin.h
 arm_neon.h
 -
 
+<<<<<<< HEAD
 /home/elcius/Documentos/github/pessoal/island-life-game/src/main.cpp
+=======
+/home/natan/Documents/Island_Life/island-life-game/src/main.cpp
+iostream
+-
+map
+-
+>>>>>>> 68cb6c12585288b7007681d767be0c3a2682695e
 string
 -
 GL/glew.h
 -
 GLFW/glfw3.h
 -
+GL/glut.h
+-
+ft2build.h
+-
 Shader.h
+<<<<<<< HEAD
 /home/elcius/Documentos/github/pessoal/island-life-game/src/Shader.h
 Camera.h
 /home/elcius/Documentos/github/pessoal/island-life-game/src/Camera.h
@@ -1151,6 +1164,15 @@ Skybox.h
 /home/elcius/Documentos/github/pessoal/island-life-game/src/Skybox.h
 Model.h
 /home/elcius/Documentos/github/pessoal/island-life-game/src/Model.h
+=======
+/home/natan/Documents/Island_Life/island-life-game/src/Shader.h
+Camera.h
+/home/natan/Documents/Island_Life/island-life-game/src/Camera.h
+Skybox.h
+/home/natan/Documents/Island_Life/island-life-game/src/Skybox.h
+Model.h
+/home/natan/Documents/Island_Life/island-life-game/src/Model.h
+>>>>>>> 68cb6c12585288b7007681d767be0c3a2682695e
 glm/glm.hpp
 -
 glm/gtc/matrix_transform.hpp
