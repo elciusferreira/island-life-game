@@ -13,7 +13,7 @@
 #include <GL/glut.h>
 
 // FreeType
-#include "include/ft2build.h"
+#include <ft2build.h>
 #include FT_FREETYPE_H
 
 // GL includes
@@ -30,6 +30,7 @@
 // Other Libs
 #include <SOIL.h>
 #include "Itens.h"
+#include "Colision.h"
 
 // Properties
 GLuint screenWidth = 800, screenHeight = 600;
@@ -62,11 +63,9 @@ bool showCollect = false;
 bool showCollectOk = false;
 bool positionMission = false;
 
+// COLISIONS
+Colision testColision;
 
-bool showMessage = false;
-bool positionWood = false;
-bool colectWood = false;
-glm::vec3 posicaoMadeira = glm::vec3(8.0f, 0.0f, -11.0f);
 /// Holds all state information relevant to a character as loaded using FreeType
 std::string message;
 struct Character {
@@ -185,13 +184,18 @@ int main()
     Itens madeira(glm::vec3(8.0f, 0.0f, -11.0f));
     Itens corda(glm::vec3(2.0f,0.0f,-25.0f));
     Itens alimentos(glm::vec3(20.0f,0.0f,16.0f));
-    Itens barco(glm::vec3(0.0f,0.0f,0.0f));
+    Itens barco(glm::vec3(-99.0f,-99.0f,-99.0f));
 
     priority.push_back(tadeu);
     priority.push_back(madeira);
     priority.push_back(corda);
     priority.push_back(alimentos);
     priority.push_back(barco);
+
+    testColision.addObject(glm::vec3(0.0f, -2.5f, 2.0f));
+    testColision.addObject(glm::vec3(0.81f, -2.7f, -3.7f));
+
+    testColision.start();
 
     // Setup and compile our shaders
     Shader lightingShader("resources/shaders/lighting.vs", "resources/shaders/lighting.frag");
@@ -335,6 +339,7 @@ skyboxShader.setInt("skybox", 0);
     Model Apple("resources/models/apple.obj");
     Model Banana("resources/models/banana.obj");
     Model Island("resources/models/Small_Tropical_Island.obj");
+    
     Model Lamp("resources/models/Lamp.obj");
     /*Model Lamp2("resources/models/Lamp.obj");
     Model Lamp3("resources/models/Lamp.obj");
@@ -509,7 +514,7 @@ skyboxShader.setInt("skybox", 0);
         if(showMessage)
             Lamp7.Draw(lampShader);*/
 
-        RenderText(shader, "Pega ai o vareto!!", screenWidth/2, screenHeight/2, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+        //RenderText(shader, "Pega ai o vareto!!", screenWidth/2, screenHeight/2, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
         /*lightingShader.Use();
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_map));
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
@@ -701,16 +706,20 @@ void Do_Movement()
     GLfloat offsetY = 0.0004 * sin(glm::radians(theta));
 
     if((keys[GLFW_KEY_W])||(keys[GLFW_KEY_S])||(keys[GLFW_KEY_A])||(keys[GLFW_KEY_D])){
-
-        // Camera controls
-        if(keys[GLFW_KEY_W])
-            camera.ProcessKeyboard(FORWARD, deltaTime, offsetY);
-        if(keys[GLFW_KEY_S])
-            camera.ProcessKeyboard(BACKWARD, deltaTime, offsetY);
-        if(keys[GLFW_KEY_A])
-            camera.ProcessKeyboard(LEFT, deltaTime, offsetY);
-        if(keys[GLFW_KEY_D])
-            camera.ProcessKeyboard(RIGHT, deltaTime, offsetY);
+        if(!testColision.isColision(camera.Position)){
+            // Camera controls
+            if(keys[GLFW_KEY_W])
+                camera.ProcessKeyboard(FORWARD, deltaTime, offsetY);
+            if(keys[GLFW_KEY_S])
+                camera.ProcessKeyboard(BACKWARD, deltaTime, offsetY);
+            if(keys[GLFW_KEY_A])
+                camera.ProcessKeyboard(LEFT, deltaTime, offsetY);
+            if(keys[GLFW_KEY_D])
+                camera.ProcessKeyboard(RIGHT, deltaTime, offsetY);
+        }
+        else{
+            camera.ProcessKeyboard(BACKWARD, deltaTime/2, offsetY);
+        }
 
         // TALK WITH TADEU
         canInteractStart = false;
