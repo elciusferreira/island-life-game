@@ -108,7 +108,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-    GLFWwindow* window = glfwCreateWindow(screenWidth, screenHeight, "Project Helios", nullptr, nullptr); // Windowed
+    GLFWwindow* window = glfwCreateWindow(screenWidth, screenHeight, "Island Life - The Game", nullptr, nullptr); // Windowed
 
     glfwMakeContextCurrent(window);
 
@@ -220,12 +220,12 @@ int main()
     FT_Set_Pixel_Sizes(face, 0, 48);
 
     // Disable byte-alignment restriction
-    glPixelStorei(GL_UNPACK_ALIGNMENT, 1); 
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 
     // Load first 128 characters of ASCII set
     for (GLubyte c = 0; c < 128; c++)
     {
-        // Load character glyph 
+        // Load character glyph
         if (FT_Load_Char(face, c, FT_LOAD_RENDER))
         {
             std::cout << "ERROR::FREETYTPE: Failed to load Glyph" << std::endl;
@@ -265,7 +265,7 @@ int main()
     FT_Done_Face(face);
     FT_Done_FreeType(ft);
 
-    
+
     // Configure VAO/VBO for texture quads
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -326,8 +326,12 @@ skyboxShader.setInt("skybox", 0);
 
     // Load Models
     //Model Map("resources/models/prisao.obj");
-    Model Statue("resources/models/EasterIslandStatue.obj");
-    Model Wood("resources/models/EasterIslandStatue.obj");
+
+		Model Statue("resources/models/EasterIslandStatue.obj");
+		Model Bonfire("resources/models/bonfire.obj");
+		Model Wood("resources/models/wood.obj");
+		std::cout << "CHEGOU AQUI" << '\n';
+
     Model Island("resources/models/Small_Tropical_Island.obj");
     //Model Firepit("resources/models/Firepit.obj");
     Model Lamp("resources/models/Lamp.obj");
@@ -393,9 +397,10 @@ skyboxShader.setInt("skybox", 0);
 
         // Draw the loaded model
         //glm::mat4 model_map;
-        glm::mat4 model_island;
-        glm::mat4 model_statue;
-        glm::mat4 model_wood;
+				glm::mat4 model_island;
+				glm::mat4 model_statue;
+				glm::mat4 model_bonfire;
+				glm::mat4 model_wood;
         glm::mat4 model_lamp;
         glm::mat4 model_lamp2;
         glm::mat4 model_lamp3;
@@ -420,8 +425,12 @@ skyboxShader.setInt("skybox", 0);
                 model_wood = glm::translate(model_wood, glm::vec3(-0.34f, -1.9f, -4.0f));
                 model_wood = glm::rotate(model_wood, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
-                model_lamp = glm::translate(model_lamp, glm::vec3(1.5f, -3.2f, 2.0f));
-                model_lamp = glm::rotate(model_lamp, glm::radians(0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+								model_bonfire = glm::translate(model_bonfire, glm::vec3(0.81f, -2.7f, -3.7f));
+								model_bonfire = glm::scale(model_bonfire, glm::vec3(0.15f, 0.15f, 0.15f));
+								//model_wood = glm::rotate(model_wood, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+
+								model_wood = glm::translate(model_wood, glm::vec3(0.26f, -1.8f, -8.3f));
+								model_wood = glm::scale(model_wood, glm::vec3(0.15f, 0.15f, 0.15f));
 
                 model_lamp2 = glm::translate(model_lamp2, glm::vec3(-16.0f, 0.0f, -5.2f));
                 model_lamp2 = glm::rotate(model_lamp2, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
@@ -445,32 +454,34 @@ skyboxShader.setInt("skybox", 0);
                 model_firepit = glm::rotate(model_firepit, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
                 lampShader.Use();
-        glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp));
+        				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp));
                 Lamp.Draw(lampShader);
 
                 lampShader.Use();
-        glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp2));
+        				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp2));
                 Lamp2.Draw(lampShader);
 
                 lampShader.Use();
-        glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp3));
+        				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp3));
                 Lamp3.Draw(lampShader);
 
                 lampShader.Use();
-        glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp4));
+        				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp4));
                 Lamp4.Draw(lampShader);
 
                 lampShader.Use();
-        glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp5));
+        				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp5));
                 Lamp5.Draw(lampShader);
 
                 lampShader.Use();
-        glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp6));
+        				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp6));
                 Lamp6.Draw(lampShader);
 
                 lampShader.Use();
+
         glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp7));
             
+
 
                 
         /*lightingShader.Use();
@@ -481,24 +492,24 @@ skyboxShader.setInt("skybox", 0);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
         Map.Draw(lightingShader);*/
 
-                lightingShader.Use();
-                glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_statue));
+        lightingShader.Use();
+        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_statue));
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 1.0f, 1.0f, 1.0f);
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 1.0f, 1.0f, 1.0f);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
         Statue.Draw(lightingShader);
 
-                /*lightingShader.Use();
-                glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_firepit));
+				lightingShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_bonfire));
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
-        Firepit.Draw(lightingShader);*/
+        Bonfire.Draw(lightingShader);
 
-        lightingShader.Use();
-        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_wood));
+				lightingShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_wood));
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
@@ -645,7 +656,7 @@ void Do_Movement()
             positionMission = true;
         }
 
-        
+    
 
         if(theta > 360)
             theta = 0;
@@ -731,7 +742,7 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 
 void RenderText(Shader &shader, std::string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color)
 {
-    // Activate corresponding render state  
+    // Activate corresponding render state
     shader.Use();
     glUniform3f(glGetUniformLocation(shader.Program, "textColor"), color.x, color.y, color.z);
     glActiveTexture(GL_TEXTURE0);
@@ -739,7 +750,7 @@ void RenderText(Shader &shader, std::string text, GLfloat x, GLfloat y, GLfloat 
 
     // Iterate through all characters
     std::string::const_iterator c;
-    for (c = text.begin(); c != text.end(); c++) 
+    for (c = text.begin(); c != text.end(); c++)
     {
         Character ch = Characters[*c];
 
@@ -750,13 +761,13 @@ void RenderText(Shader &shader, std::string text, GLfloat x, GLfloat y, GLfloat 
         GLfloat h = ch.Size.y * scale;
         // Update VBO for each character
         GLfloat vertices[6][4] = {
-            { xpos,     ypos + h,   0.0, 0.0 },            
+            { xpos,     ypos + h,   0.0, 0.0 },
             { xpos,     ypos,       0.0, 1.0 },
             { xpos + w, ypos,       1.0, 1.0 },
 
             { xpos,     ypos + h,   0.0, 0.0 },
             { xpos + w, ypos,       1.0, 1.0 },
-            { xpos + w, ypos + h,   1.0, 0.0 }           
+            { xpos + w, ypos + h,   1.0, 0.0 }
         };
         // Render glyph texture over quad
         glBindTexture(GL_TEXTURE_2D, ch.TextureID);
