@@ -28,15 +28,15 @@ The CXX compiler identification is Clang, found in "/home/elcius/Documentos/gith
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7b8f2/fast"
+Run Build Command:"/usr/bin/make" "cmTC_bb20e/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_7b8f2.dir/build.make CMakeFiles/cmTC_7b8f2.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_bb20e.dir/build.make CMakeFiles/cmTC_bb20e.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7b8f2.dir/testCCompiler.c.o
-/usr/bin/clang-3.8     -o CMakeFiles/cmTC_7b8f2.dir/testCCompiler.c.o   -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_7b8f2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b8f2.dir/link.txt --verbose=1
-/usr/bin/clang-3.8       CMakeFiles/cmTC_7b8f2.dir/testCCompiler.c.o  -o cmTC_7b8f2 -rdynamic 
+Building C object CMakeFiles/cmTC_bb20e.dir/testCCompiler.c.o
+/usr/bin/clang-3.8     -o CMakeFiles/cmTC_bb20e.dir/testCCompiler.c.o   -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_bb20e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb20e.dir/link.txt --verbose=1
+/usr/bin/clang-3.8       CMakeFiles/cmTC_bb20e.dir/testCCompiler.c.o  -o cmTC_bb20e -rdynamic 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -44,15 +44,15 @@ make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-g
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7eca2/fast"
+Run Build Command:"/usr/bin/make" "cmTC_6b52c/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_7eca2.dir/build.make CMakeFiles/cmTC_7eca2.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_6b52c.dir/build.make CMakeFiles/cmTC_6b52c.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7eca2.dir/CMakeCCompilerABI.c.o
-/usr/bin/clang-3.8     -o CMakeFiles/cmTC_7eca2.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_7eca2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7eca2.dir/link.txt --verbose=1
-/usr/bin/clang-3.8      -v CMakeFiles/cmTC_7eca2.dir/CMakeCCompilerABI.c.o  -o cmTC_7eca2 -rdynamic  
+Building C object CMakeFiles/cmTC_6b52c.dir/CMakeCCompilerABI.c.o
+/usr/bin/clang-3.8     -o CMakeFiles/cmTC_6b52c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_6b52c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b52c.dir/link.txt --verbose=1
+/usr/bin/clang-3.8      -v CMakeFiles/cmTC_6b52c.dir/CMakeCCompilerABI.c.o  -o cmTC_6b52c -rdynamic  
 clang version 3.8.0-2ubuntu4 (tags/RELEASE_380/final)
 Target: x86_64-pc-linux-gnu
 Thread model: posix
@@ -69,7 +69,7 @@ Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
 Found CUDA installation: /usr/local/cuda
- "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7eca2 /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_7eca2.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o
+ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_6b52c /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_6b52c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -78,15 +78,15 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_7eca2/fast"]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_6b52c/fast"]
   ignore line: [make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_7eca2.dir/build.make CMakeFiles/cmTC_7eca2.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_6b52c.dir/build.make CMakeFiles/cmTC_6b52c.dir/build]
   ignore line: [make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_7eca2.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/clang-3.8     -o CMakeFiles/cmTC_7eca2.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_7eca2]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7eca2.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/clang-3.8      -v CMakeFiles/cmTC_7eca2.dir/CMakeCCompilerABI.c.o  -o cmTC_7eca2 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTC_6b52c.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/clang-3.8     -o CMakeFiles/cmTC_6b52c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_6b52c]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b52c.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/clang-3.8      -v CMakeFiles/cmTC_6b52c.dir/CMakeCCompilerABI.c.o  -o cmTC_6b52c -rdynamic  ]
   ignore line: [clang version 3.8.0-2ubuntu4 (tags/RELEASE_380/final)]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
@@ -105,7 +105,7 @@ Parsed C implicit link information from above output:
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
   ignore line: [Found CUDA installation: /usr/local/cuda]
-  link line: [ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7eca2 /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_7eca2.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o]
+  link line: [ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_6b52c /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_6b52c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/bin/ld] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [-zrelro] ==> ignore
@@ -117,7 +117,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_7eca2] ==> ignore
+    arg [cmTC_6b52c] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o] ==> ignore
@@ -130,7 +130,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/llvm-3.8/bin/../lib] ==> dir [/usr/lib/llvm-3.8/bin/../lib]
     arg [-L/lib] ==> dir [/lib]
     arg [-L/usr/lib] ==> dir [/usr/lib]
-    arg [CMakeFiles/cmTC_7eca2.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_6b52c.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -165,15 +165,15 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a4a80/fast"
+Run Build Command:"/usr/bin/make" "cmTC_f1811/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_a4a80.dir/build.make CMakeFiles/cmTC_a4a80.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_f1811.dir/build.make CMakeFiles/cmTC_f1811.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a4a80.dir/feature_tests.c.o
-/usr/bin/clang-3.8    -std=c11 -o CMakeFiles/cmTC_a4a80.dir/feature_tests.c.o   -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_a4a80
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4a80.dir/link.txt --verbose=1
-/usr/bin/clang-3.8       CMakeFiles/cmTC_a4a80.dir/feature_tests.c.o  -o cmTC_a4a80 -rdynamic 
+Building C object CMakeFiles/cmTC_f1811.dir/feature_tests.c.o
+/usr/bin/clang-3.8    -std=c11 -o CMakeFiles/cmTC_f1811.dir/feature_tests.c.o   -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_f1811
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1811.dir/link.txt --verbose=1
+/usr/bin/clang-3.8       CMakeFiles/cmTC_f1811.dir/feature_tests.c.o  -o cmTC_f1811 -rdynamic 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -187,15 +187,15 @@ make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-g
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4c863/fast"
+Run Build Command:"/usr/bin/make" "cmTC_440c7/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_4c863.dir/build.make CMakeFiles/cmTC_4c863.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_440c7.dir/build.make CMakeFiles/cmTC_440c7.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4c863.dir/feature_tests.c.o
-/usr/bin/clang-3.8    -std=c99 -o CMakeFiles/cmTC_4c863.dir/feature_tests.c.o   -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_4c863
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c863.dir/link.txt --verbose=1
-/usr/bin/clang-3.8       CMakeFiles/cmTC_4c863.dir/feature_tests.c.o  -o cmTC_4c863 -rdynamic 
+Building C object CMakeFiles/cmTC_440c7.dir/feature_tests.c.o
+/usr/bin/clang-3.8    -std=c99 -o CMakeFiles/cmTC_440c7.dir/feature_tests.c.o   -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_440c7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_440c7.dir/link.txt --verbose=1
+/usr/bin/clang-3.8       CMakeFiles/cmTC_440c7.dir/feature_tests.c.o  -o cmTC_440c7 -rdynamic 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -209,15 +209,15 @@ make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-g
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cd5e1/fast"
+Run Build Command:"/usr/bin/make" "cmTC_e3cd5/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_cd5e1.dir/build.make CMakeFiles/cmTC_cd5e1.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_e3cd5.dir/build.make CMakeFiles/cmTC_e3cd5.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cd5e1.dir/feature_tests.c.o
-/usr/bin/clang-3.8    -std=c90 -o CMakeFiles/cmTC_cd5e1.dir/feature_tests.c.o   -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_cd5e1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd5e1.dir/link.txt --verbose=1
-/usr/bin/clang-3.8       CMakeFiles/cmTC_cd5e1.dir/feature_tests.c.o  -o cmTC_cd5e1 -rdynamic 
+Building C object CMakeFiles/cmTC_e3cd5.dir/feature_tests.c.o
+/usr/bin/clang-3.8    -std=c90 -o CMakeFiles/cmTC_e3cd5.dir/feature_tests.c.o   -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_e3cd5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3cd5.dir/link.txt --verbose=1
+/usr/bin/clang-3.8       CMakeFiles/cmTC_e3cd5.dir/feature_tests.c.o  -o cmTC_e3cd5 -rdynamic 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -229,15 +229,15 @@ make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-g
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_28eca/fast"
+Run Build Command:"/usr/bin/make" "cmTC_471f9/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_28eca.dir/build.make CMakeFiles/cmTC_28eca.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_471f9.dir/build.make CMakeFiles/cmTC_471f9.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_28eca.dir/testCXXCompiler.cxx.o
-/usr/bin/clang++-3.8      -o CMakeFiles/cmTC_28eca.dir/testCXXCompiler.cxx.o -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_28eca
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28eca.dir/link.txt --verbose=1
-/usr/bin/clang++-3.8        CMakeFiles/cmTC_28eca.dir/testCXXCompiler.cxx.o  -o cmTC_28eca -rdynamic 
+Building CXX object CMakeFiles/cmTC_471f9.dir/testCXXCompiler.cxx.o
+/usr/bin/clang++-3.8      -o CMakeFiles/cmTC_471f9.dir/testCXXCompiler.cxx.o -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_471f9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_471f9.dir/link.txt --verbose=1
+/usr/bin/clang++-3.8        CMakeFiles/cmTC_471f9.dir/testCXXCompiler.cxx.o  -o cmTC_471f9 -rdynamic 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -245,15 +245,15 @@ make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-g
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_47213/fast"
+Run Build Command:"/usr/bin/make" "cmTC_fba9e/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_47213.dir/build.make CMakeFiles/cmTC_47213.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_fba9e.dir/build.make CMakeFiles/cmTC_fba9e.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_47213.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/clang++-3.8      -o CMakeFiles/cmTC_47213.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_47213
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47213.dir/link.txt --verbose=1
-/usr/bin/clang++-3.8       -v CMakeFiles/cmTC_47213.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_47213 -rdynamic  
+Building CXX object CMakeFiles/cmTC_fba9e.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/clang++-3.8      -o CMakeFiles/cmTC_fba9e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_fba9e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fba9e.dir/link.txt --verbose=1
+/usr/bin/clang++-3.8       -v CMakeFiles/cmTC_fba9e.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fba9e -rdynamic  
 clang version 3.8.0-2ubuntu4 (tags/RELEASE_380/final)
 Target: x86_64-pc-linux-gnu
 Thread model: posix
@@ -270,7 +270,7 @@ Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
 Found CUDA installation: /usr/local/cuda
- "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_47213 /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_47213.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o
+ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_fba9e /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_fba9e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -279,15 +279,15 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_47213/fast"]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_fba9e/fast"]
   ignore line: [make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_47213.dir/build.make CMakeFiles/cmTC_47213.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_fba9e.dir/build.make CMakeFiles/cmTC_fba9e.dir/build]
   ignore line: [make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_47213.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/clang++-3.8      -o CMakeFiles/cmTC_47213.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_47213]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47213.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/clang++-3.8       -v CMakeFiles/cmTC_47213.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_47213 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_fba9e.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/clang++-3.8      -o CMakeFiles/cmTC_fba9e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_fba9e]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fba9e.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/clang++-3.8       -v CMakeFiles/cmTC_fba9e.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fba9e -rdynamic  ]
   ignore line: [clang version 3.8.0-2ubuntu4 (tags/RELEASE_380/final)]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
@@ -306,7 +306,7 @@ Parsed CXX implicit link information from above output:
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
   ignore line: [Found CUDA installation: /usr/local/cuda]
-  link line: [ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_47213 /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_47213.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o]
+  link line: [ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_fba9e /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_fba9e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/bin/ld] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [-zrelro] ==> ignore
@@ -318,7 +318,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_47213] ==> ignore
+    arg [cmTC_fba9e] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o] ==> ignore
@@ -331,7 +331,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/llvm-3.8/bin/../lib] ==> dir [/usr/lib/llvm-3.8/bin/../lib]
     arg [-L/lib] ==> dir [/lib]
     arg [-L/usr/lib] ==> dir [/usr/lib]
-    arg [CMakeFiles/cmTC_47213.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_fba9e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -364,15 +364,15 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0f7b1/fast"
+Run Build Command:"/usr/bin/make" "cmTC_fef99/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_0f7b1.dir/build.make CMakeFiles/cmTC_0f7b1.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_fef99.dir/build.make CMakeFiles/cmTC_fef99.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_0f7b1.dir/feature_tests.cxx.o
-/usr/bin/clang++-3.8     -std=c++14 -o CMakeFiles/cmTC_0f7b1.dir/feature_tests.cxx.o -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_0f7b1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f7b1.dir/link.txt --verbose=1
-/usr/bin/clang++-3.8        CMakeFiles/cmTC_0f7b1.dir/feature_tests.cxx.o  -o cmTC_0f7b1 -rdynamic 
+Building CXX object CMakeFiles/cmTC_fef99.dir/feature_tests.cxx.o
+/usr/bin/clang++-3.8     -std=c++14 -o CMakeFiles/cmTC_fef99.dir/feature_tests.cxx.o -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_fef99
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fef99.dir/link.txt --verbose=1
+/usr/bin/clang++-3.8        CMakeFiles/cmTC_fef99.dir/feature_tests.cxx.o  -o cmTC_fef99 -rdynamic 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -439,15 +439,15 @@ make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-g
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f6dbe/fast"
+Run Build Command:"/usr/bin/make" "cmTC_6d1c3/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_f6dbe.dir/build.make CMakeFiles/cmTC_f6dbe.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_6d1c3.dir/build.make CMakeFiles/cmTC_6d1c3.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f6dbe.dir/feature_tests.cxx.o
-/usr/bin/clang++-3.8     -std=c++11 -o CMakeFiles/cmTC_f6dbe.dir/feature_tests.cxx.o -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f6dbe
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6dbe.dir/link.txt --verbose=1
-/usr/bin/clang++-3.8        CMakeFiles/cmTC_f6dbe.dir/feature_tests.cxx.o  -o cmTC_f6dbe -rdynamic 
+Building CXX object CMakeFiles/cmTC_6d1c3.dir/feature_tests.cxx.o
+/usr/bin/clang++-3.8     -std=c++11 -o CMakeFiles/cmTC_6d1c3.dir/feature_tests.cxx.o -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_6d1c3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d1c3.dir/link.txt --verbose=1
+/usr/bin/clang++-3.8        CMakeFiles/cmTC_6d1c3.dir/feature_tests.cxx.o  -o cmTC_6d1c3 -rdynamic 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -514,15 +514,15 @@ make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-g
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1ce07/fast"
+Run Build Command:"/usr/bin/make" "cmTC_2eac2/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_1ce07.dir/build.make CMakeFiles/cmTC_1ce07.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_2eac2.dir/build.make CMakeFiles/cmTC_2eac2.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1ce07.dir/feature_tests.cxx.o
-/usr/bin/clang++-3.8     -std=c++98 -o CMakeFiles/cmTC_1ce07.dir/feature_tests.cxx.o -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_1ce07
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ce07.dir/link.txt --verbose=1
-/usr/bin/clang++-3.8        CMakeFiles/cmTC_1ce07.dir/feature_tests.cxx.o  -o cmTC_1ce07 -rdynamic 
+Building CXX object CMakeFiles/cmTC_2eac2.dir/feature_tests.cxx.o
+/usr/bin/clang++-3.8     -std=c++98 -o CMakeFiles/cmTC_2eac2.dir/feature_tests.cxx.o -c /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_2eac2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2eac2.dir/link.txt --verbose=1
+/usr/bin/clang++-3.8        CMakeFiles/cmTC_2eac2.dir/feature_tests.cxx.o  -o cmTC_2eac2 -rdynamic 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -587,15 +587,15 @@ make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-g
 Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4852e/fast"
+Run Build Command:"/usr/bin/make" "cmTC_af1e0/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_4852e.dir/build.make CMakeFiles/cmTC_4852e.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_af1e0.dir/build.make CMakeFiles/cmTC_af1e0.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4852e.dir/CheckFunctionExists.c.o
-/usr/bin/clang-3.8    -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_4852e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_4852e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4852e.dir/link.txt --verbose=1
-/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTC_4852e.dir/CheckFunctionExists.c.o  -o cmTC_4852e -rdynamic /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+Building C object CMakeFiles/cmTC_af1e0.dir/CheckFunctionExists.c.o
+/usr/bin/clang-3.8    -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_af1e0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_af1e0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af1e0.dir/link.txt --verbose=1
+/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTC_af1e0.dir/CheckFunctionExists.c.o  -o cmTC_af1e0 -rdynamic /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -603,15 +603,15 @@ make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-g
 Determining if the function gethostbyname exists passed with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1e04f/fast"
+Run Build Command:"/usr/bin/make" "cmTC_01fbf/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_1e04f.dir/build.make CMakeFiles/cmTC_1e04f.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_01fbf.dir/build.make CMakeFiles/cmTC_01fbf.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1e04f.dir/CheckFunctionExists.c.o
-/usr/bin/clang-3.8    -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_1e04f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_1e04f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e04f.dir/link.txt --verbose=1
-/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_1e04f.dir/CheckFunctionExists.c.o  -o cmTC_1e04f -rdynamic 
+Building C object CMakeFiles/cmTC_01fbf.dir/CheckFunctionExists.c.o
+/usr/bin/clang-3.8    -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_01fbf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_01fbf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01fbf.dir/link.txt --verbose=1
+/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_01fbf.dir/CheckFunctionExists.c.o  -o cmTC_01fbf -rdynamic 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -619,15 +619,15 @@ make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-g
 Determining if the function connect exists passed with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_66c61/fast"
+Run Build Command:"/usr/bin/make" "cmTC_fc1b8/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_66c61.dir/build.make CMakeFiles/cmTC_66c61.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_fc1b8.dir/build.make CMakeFiles/cmTC_fc1b8.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_66c61.dir/CheckFunctionExists.c.o
-/usr/bin/clang-3.8    -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_66c61.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_66c61
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66c61.dir/link.txt --verbose=1
-/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTC_66c61.dir/CheckFunctionExists.c.o  -o cmTC_66c61 -rdynamic 
+Building C object CMakeFiles/cmTC_fc1b8.dir/CheckFunctionExists.c.o
+/usr/bin/clang-3.8    -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_fc1b8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fc1b8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc1b8.dir/link.txt --verbose=1
+/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTC_fc1b8.dir/CheckFunctionExists.c.o  -o cmTC_fc1b8 -rdynamic 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -635,15 +635,15 @@ make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-g
 Determining if the function remove exists passed with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6c101/fast"
+Run Build Command:"/usr/bin/make" "cmTC_e6d9e/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_6c101.dir/build.make CMakeFiles/cmTC_6c101.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_e6d9e.dir/build.make CMakeFiles/cmTC_e6d9e.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6c101.dir/CheckFunctionExists.c.o
-/usr/bin/clang-3.8    -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_6c101.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_6c101
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c101.dir/link.txt --verbose=1
-/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTC_6c101.dir/CheckFunctionExists.c.o  -o cmTC_6c101 -rdynamic 
+Building C object CMakeFiles/cmTC_e6d9e.dir/CheckFunctionExists.c.o
+/usr/bin/clang-3.8    -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_e6d9e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e6d9e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6d9e.dir/link.txt --verbose=1
+/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTC_e6d9e.dir/CheckFunctionExists.c.o  -o cmTC_e6d9e -rdynamic 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -651,15 +651,15 @@ make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-g
 Determining if the function shmat exists passed with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ff4d7/fast"
+Run Build Command:"/usr/bin/make" "cmTC_97bdd/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_ff4d7.dir/build.make CMakeFiles/cmTC_ff4d7.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_97bdd.dir/build.make CMakeFiles/cmTC_97bdd.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ff4d7.dir/CheckFunctionExists.c.o
-/usr/bin/clang-3.8    -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_ff4d7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_ff4d7
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff4d7.dir/link.txt --verbose=1
-/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTC_ff4d7.dir/CheckFunctionExists.c.o  -o cmTC_ff4d7 -rdynamic 
+Building C object CMakeFiles/cmTC_97bdd.dir/CheckFunctionExists.c.o
+/usr/bin/clang-3.8    -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_97bdd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_97bdd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97bdd.dir/link.txt --verbose=1
+/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTC_97bdd.dir/CheckFunctionExists.c.o  -o cmTC_97bdd -rdynamic 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -667,15 +667,15 @@ make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-g
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
 Change Dir: /home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8fc32/fast"
+Run Build Command:"/usr/bin/make" "cmTC_7db73/fast"
 make[1]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_8fc32.dir/build.make CMakeFiles/cmTC_8fc32.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_7db73.dir/build.make CMakeFiles/cmTC_7db73.dir/build
 make[2]: Entering directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8fc32.dir/CheckFunctionExists.c.o
-/usr/bin/clang-3.8    -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_8fc32.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_8fc32
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8fc32.dir/link.txt --verbose=1
-/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTC_8fc32.dir/CheckFunctionExists.c.o  -o cmTC_8fc32 -rdynamic -lICE 
+Building C object CMakeFiles/cmTC_7db73.dir/CheckFunctionExists.c.o
+/usr/bin/clang-3.8    -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_7db73.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7db73
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7db73.dir/link.txt --verbose=1
+/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTC_7db73.dir/CheckFunctionExists.c.o  -o cmTC_7db73 -rdynamic -lICE 
 make[2]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/CMakeTmp'
 

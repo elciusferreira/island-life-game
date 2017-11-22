@@ -4,6 +4,7 @@
 CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/Camera.h
 CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/GL/glew.h
 CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/GLFW/glfw3.h
+CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/Itens.h
 CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/Mesh.h
 CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/Model.h
 CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/SOIL.h
