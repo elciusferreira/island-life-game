@@ -11,7 +11,7 @@
 #include <GL/glut.h>
 
 // FreeType
-#include <ft2build.h>
+#include "include/ft2build.h"
 #include FT_FREETYPE_H
 
 // GL includes
@@ -293,24 +293,22 @@ skyboxShader.setInt("skybox", 0);
 
     // Load Models
     //Model Map("resources/models/prisao.obj");
-<<<<<<< HEAD
 		Model Statue("resources/models/EasterIslandStatue.obj");
 		Model Bonfire("resources/models/bonfire.obj");
 		Model Wood("resources/models/wood.obj");
-		std::cout << "CHEGOU AQUI" << '\n';
-=======
-    Model Statue("resources/models/EasterIslandStatue.obj");
-    Model Wood("resources/models/EasterIslandStatue.obj");
->>>>>>> 68cb6c12585288b7007681d767be0c3a2682695e
+    Model Vines("resources/models/vines.obj");
+    Model Orange("resources/models/orange.obj");
+    Model Pear("resources/models/pear.obj");
+    Model Apple("resources/models/apple.obj");
+    Model Banana("resources/models/banana.obj");
     Model Island("resources/models/Small_Tropical_Island.obj");
-    //Model Firepit("resources/models/Firepit.obj");
     Model Lamp("resources/models/Lamp.obj");
-    Model Lamp2("resources/models/Lamp.obj");
+    /*Model Lamp2("resources/models/Lamp.obj");
     Model Lamp3("resources/models/Lamp.obj");
     Model Lamp4("resources/models/Lamp.obj");
     Model Lamp5("resources/models/Lamp.obj");
-    Model Lamp6("resources/models/Lamp.obj");
-    Model Lamp7("resources/models/Lamp.obj");
+    Model Lamp6("resources/models/Lamp.obj");*/
+    //Model Lamp7("resources/models/Lamp.obj");
         // std::cout << "Debug3" << '\n';
     // Model Bat1("resources/models/Huge Battery.obj");
     // Model Bat2("resources/models/Huge Battery.obj");
@@ -371,89 +369,114 @@ skyboxShader.setInt("skybox", 0);
 				glm::mat4 model_statue;
 				glm::mat4 model_bonfire;
 				glm::mat4 model_wood;
+        glm::mat4 model_vine1;
+        glm::mat4 model_vine2;
+        glm::mat4 model_apple;
+        glm::mat4 model_pear;
+        glm::mat4 model_banana;
+        glm::mat4 model_orange;
         glm::mat4 model_lamp;
-        glm::mat4 model_lamp2;
+        /*glm::mat4 model_lamp2;
         glm::mat4 model_lamp3;
         glm::mat4 model_lamp4;
         glm::mat4 model_lamp5;
         glm::mat4 model_lamp6;
-        glm::mat4 model_lamp7;
-        glm::mat4 model_firepit;
+        glm::mat4 model_lamp7;*/
 
         // Draw
 
 
-                model_island = glm::translate(model_island, glm::vec3(26.0f, -5.0f, -15.0f));
-                model_island = glm::scale(model_island, glm::vec3(0.10f, 0.10f, 0.10f));
+        model_island = glm::translate(model_island, glm::vec3(26.0f, -5.0f, -15.0f));
+        model_island = glm::scale(model_island, glm::vec3(0.10f, 0.10f, 0.10f));
 
-                //model_map = glm::translate(model_map, glm::vec3(0.0f, -2.5f, 0.0f));
-                //model_map = glm::rotate(model_map, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        //model_map = glm::translate(model_map, glm::vec3(0.0f, -2.5f, 0.0f));
+        //model_map = glm::rotate(model_map, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
-                model_statue = glm::translate(model_statue, glm::vec3(0.0f, -2.5f, 2.0f));
-                model_statue = glm::rotate(model_statue, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        model_statue = glm::translate(model_statue, glm::vec3(0.0f, -2.5f, 2.0f));
+        model_statue = glm::rotate(model_statue, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
-                model_wood = glm::translate(model_wood, glm::vec3(-0.34f, -1.9f, -4.0f));
-                model_wood = glm::rotate(model_wood, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        /*model_wood = glm::translate(model_wood, glm::vec3(20.0f, 1.0f, -15.0f));
+        model_wood = glm::rotate(model_wood, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));*/
 
-								model_bonfire = glm::translate(model_bonfire, glm::vec3(0.81f, -2.7f, -3.7f));
-								model_bonfire = glm::scale(model_bonfire, glm::vec3(0.15f, 0.15f, 0.15f));
-								//model_wood = glm::rotate(model_wood, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+				model_bonfire = glm::translate(model_bonfire, glm::vec3(0.81f, -2.7f, -3.7f));
+				model_bonfire = glm::scale(model_bonfire, glm::vec3(0.15f, 0.15f, 0.15f));
+				//model_wood = glm::rotate(model_wood, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
-								model_wood = glm::translate(model_wood, glm::vec3(0.26f, -1.8f, -8.3f));
-								model_wood = glm::scale(model_wood, glm::vec3(0.15f, 0.15f, 0.15f));
+				model_wood = glm::translate(model_wood, glm::vec3(20.0f, -0.7f, -23.0f));
+				model_wood = glm::scale(model_wood, glm::vec3(0.10f, 0.10f, 0.10f));
 
-                model_lamp2 = glm::translate(model_lamp2, glm::vec3(-16.0f, 0.0f, -5.2f));
-                model_lamp2 = glm::rotate(model_lamp2, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+        model_vine1 = glm::translate(model_vine1, glm::vec3(24.5f, -1.0f, -6.5f));
+        model_vine1 = glm::rotate(model_vine1, glm::radians(30.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+				model_vine1 = glm::scale(model_vine1, glm::vec3(0.15f, 0.15f, 0.15f));
 
-                model_lamp3 = glm::translate(model_lamp3, glm::vec3(-25.0f, 0.0f, -26.0f));
-                model_lamp3 = glm::rotate(model_lamp3, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+        model_vine2 = glm::translate(model_vine2, glm::vec3(24.5f, -1.0f, -6.7f));
+        model_vine2 = glm::rotate(model_vine2, glm::radians(30.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+				model_vine2 = glm::scale(model_vine2, glm::vec3(0.15f, 0.15f, 0.15f));
 
-                model_lamp4 = glm::translate(model_lamp4, glm::vec3(-30.0f, -0.3f, -7.6f));
-                model_lamp4 = glm::rotate(model_lamp4, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+        model_apple = glm::translate(model_apple, glm::vec3(28.5f, 0.7f, -29.5f));
+				model_apple = glm::scale(model_apple, glm::vec3(0.005f, 0.005f, 0.005f));
 
-                model_lamp5 = glm::translate(model_lamp5, glm::vec3(-33.0f, -0.3f, -3.2f));
-                model_lamp5 = glm::rotate(model_lamp5, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+        model_pear = glm::translate(model_pear, glm::vec3(28.0f, 0.80f, -29.5f));
+				model_pear = glm::scale(model_pear, glm::vec3(0.10f, 0.10f, 0.10f));
 
-                model_lamp6 = glm::translate(model_lamp6, glm::vec3(26.0f, 0.0f, 26.0f));
-                model_lamp6 = glm::rotate(model_lamp6, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+        //model_banana = glm::translate(model_banana, glm::vec3(29.0f, 0.75f, -23.0f));
+        model_banana = glm::translate(model_banana, glm::vec3(28.0f, 0.8f, -30.0f));
+        model_banana = glm::rotate(model_banana, glm::radians(20.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+        model_banana = glm::rotate(model_banana, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+				model_banana = glm::scale(model_banana, glm::vec3(0.07f, 0.07f, 0.07f));
 
-                model_lamp7 = glm::translate(model_lamp7, glm::vec3(9.0f, 6.8f, -11.0f));
-                model_lamp7 = glm::rotate(model_lamp7, glm::radians(0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+        model_orange = glm::translate(model_orange, glm::vec3(29.0f, 1.0f, -29.0f));
+				model_orange = glm::scale(model_orange, glm::vec3(0.15f, 0.15f, 0.15f));
 
-                model_firepit = glm::translate(model_firepit, glm::vec3(7.3f, -1.0f, -0.55f));
-                model_firepit = glm::rotate(model_firepit, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        /*model_lamp2 = glm::translate(model_lamp2, glm::vec3(-16.0f, 0.0f, -5.2f));
+        model_lamp2 = glm::rotate(model_lamp2, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
 
-                lampShader.Use();
-        				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp));
-                Lamp.Draw(lampShader);
+        model_lamp3 = glm::translate(model_lamp3, glm::vec3(-25.0f, 0.0f, -26.0f));
+        model_lamp3 = glm::rotate(model_lamp3, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
 
-                lampShader.Use();
-        				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp2));
-                Lamp2.Draw(lampShader);
+        model_lamp4 = glm::translate(model_lamp4, glm::vec3(-30.0f, -0.3f, -7.6f));
+        model_lamp4 = glm::rotate(model_lamp4, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
 
-                lampShader.Use();
-        				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp3));
-                Lamp3.Draw(lampShader);
+        model_lamp5 = glm::translate(model_lamp5, glm::vec3(-33.0f, -0.3f, -3.2f));
+        model_lamp5 = glm::rotate(model_lamp5, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
 
-                lampShader.Use();
-        				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp4));
-                Lamp4.Draw(lampShader);
+        model_lamp6 = glm::translate(model_lamp6, glm::vec3(26.0f, 0.0f, 26.0f));
+        model_lamp6 = glm::rotate(model_lamp6, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
 
-                lampShader.Use();
-        				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp5));
-                Lamp5.Draw(lampShader);
+        model_lamp7 = glm::translate(model_lamp7, glm::vec3(9.0f, 6.8f, -11.0f));
+        model_lamp7 = glm::rotate(model_lamp7, glm::radians(0.0f), glm::vec3(0.0f, 0.0f, 1.0f));*/
 
-                lampShader.Use();
-        				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp6));
-                Lamp6.Draw(lampShader);
+        lampShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp));
+        Lamp.Draw(lampShader);
 
-                lampShader.Use();
-        				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp7));
+        /*lampShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp2));
+        Lamp2.Draw(lampShader);
 
-                if(showMessage)
-                    Lamp7.Draw(lampShader);
+        lampShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp3));
+        Lamp3.Draw(lampShader);
 
-                RenderText(shader, "Pega ai o vareto!!", screenWidth/2, screenHeight/2, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+        lampShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp4));
+        Lamp4.Draw(lampShader);
+
+        lampShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp5));
+        Lamp5.Draw(lampShader);
+
+        lampShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp6));
+        Lamp6.Draw(lampShader);
+
+        lampShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp7));
+
+        if(showMessage)
+            Lamp7.Draw(lampShader);*/
+
+        RenderText(shader, "Pega ai o vareto!!", screenWidth/2, screenHeight/2, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
         /*lightingShader.Use();
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_map));
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
@@ -485,6 +508,55 @@ skyboxShader.setInt("skybox", 0);
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
         Wood.Draw(lightingShader);
+
+        lightingShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_vine1));
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+        Vines.Draw(lightingShader);
+
+        lightingShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_vine2));
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+        Vines.Draw(lightingShader);
+
+        lightingShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_apple));
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+        Apple.Draw(lightingShader);
+
+        lightingShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_pear));
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+        Pear.Draw(lightingShader);
+
+        lightingShader.Use();
+				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_banana));
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+        Banana.Draw(lightingShader);
+
+        lightingShader.Use();
+        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_orange));
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+        Orange.Draw(lightingShader);
+
 
         lightingShader.Use();
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_island));
