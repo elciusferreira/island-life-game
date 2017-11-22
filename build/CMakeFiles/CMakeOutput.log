@@ -28,15 +28,15 @@ The CXX compiler identification is Clang, found in "/home/natan/Documents/Island
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_54e84/fast"
+Run Build Command:"/usr/bin/make" "cmTC_0f800/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_54e84.dir/build.make CMakeFiles/cmTC_54e84.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_0f800.dir/build.make CMakeFiles/cmTC_0f800.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_54e84.dir/testCCompiler.c.o
-/usr/bin/clang-3.8    -o CMakeFiles/cmTC_54e84.dir/testCCompiler.c.o   -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_54e84
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54e84.dir/link.txt --verbose=1
-/usr/bin/clang-3.8      -rdynamic CMakeFiles/cmTC_54e84.dir/testCCompiler.c.o  -o cmTC_54e84 
+Building C object CMakeFiles/cmTC_0f800.dir/testCCompiler.c.o
+/usr/bin/clang-3.8    -o CMakeFiles/cmTC_0f800.dir/testCCompiler.c.o   -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_0f800
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f800.dir/link.txt --verbose=1
+/usr/bin/clang-3.8      -rdynamic CMakeFiles/cmTC_0f800.dir/testCCompiler.c.o  -o cmTC_0f800 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -44,15 +44,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_98b19/fast"
+Run Build Command:"/usr/bin/make" "cmTC_896b0/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_98b19.dir/build.make CMakeFiles/cmTC_98b19.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_896b0.dir/build.make CMakeFiles/cmTC_896b0.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_98b19.dir/CMakeCCompilerABI.c.o
-/usr/bin/clang-3.8    -o CMakeFiles/cmTC_98b19.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.9/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_98b19
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98b19.dir/link.txt --verbose=1
-/usr/bin/clang-3.8     -v -rdynamic CMakeFiles/cmTC_98b19.dir/CMakeCCompilerABI.c.o  -o cmTC_98b19 
+Building C object CMakeFiles/cmTC_896b0.dir/CMakeCCompilerABI.c.o
+/usr/bin/clang-3.8    -o CMakeFiles/cmTC_896b0.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.9/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_896b0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_896b0.dir/link.txt --verbose=1
+/usr/bin/clang-3.8     -v -rdynamic CMakeFiles/cmTC_896b0.dir/CMakeCCompilerABI.c.o  -o cmTC_896b0 
 clang version 3.8.1-24ubuntu7 (tags/RELEASE_381/final)
 Target: x86_64-pc-linux-gnu
 Thread model: posix
@@ -66,7 +66,7 @@ Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.2.0
 Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
- "/usr/bin/ld" -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_98b19 /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_98b19.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crtn.o
+ "/usr/bin/ld" -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_896b0 /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_896b0.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crtn.o
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -75,15 +75,15 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_98b19/fast"]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_896b0/fast"]
   ignore line: [make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_98b19.dir/build.make CMakeFiles/cmTC_98b19.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_896b0.dir/build.make CMakeFiles/cmTC_896b0.dir/build]
   ignore line: [make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_98b19.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/clang-3.8    -o CMakeFiles/cmTC_98b19.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_98b19]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98b19.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/clang-3.8     -v -rdynamic CMakeFiles/cmTC_98b19.dir/CMakeCCompilerABI.c.o  -o cmTC_98b19 ]
+  ignore line: [Building C object CMakeFiles/cmTC_896b0.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/clang-3.8    -o CMakeFiles/cmTC_896b0.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_896b0]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_896b0.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/clang-3.8     -v -rdynamic CMakeFiles/cmTC_896b0.dir/CMakeCCompilerABI.c.o  -o cmTC_896b0 ]
   ignore line: [clang version 3.8.1-24ubuntu7 (tags/RELEASE_381/final)]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
@@ -99,7 +99,7 @@ Parsed C implicit link information from above output:
   ignore line: [@m64]
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
-  link line: [ "/usr/bin/ld" -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_98b19 /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_98b19.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crtn.o]
+  link line: [ "/usr/bin/ld" -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_896b0 /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_896b0.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/bin/ld] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
@@ -108,7 +108,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_98b19] ==> ignore
+    arg [cmTC_896b0] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtbegin.o] ==> ignore
@@ -121,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/llvm-3.8/bin/../lib] ==> dir [/usr/lib/llvm-3.8/bin/../lib]
     arg [-L/lib] ==> dir [/lib]
     arg [-L/usr/lib] ==> dir [/usr/lib]
-    arg [CMakeFiles/cmTC_98b19.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_896b0.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -152,15 +152,15 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_aac38/fast"
+Run Build Command:"/usr/bin/make" "cmTC_826d5/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_aac38.dir/build.make CMakeFiles/cmTC_aac38.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_826d5.dir/build.make CMakeFiles/cmTC_826d5.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_aac38.dir/feature_tests.c.o
-/usr/bin/clang-3.8   -std=c11 -o CMakeFiles/cmTC_aac38.dir/feature_tests.c.o   -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_aac38
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aac38.dir/link.txt --verbose=1
-/usr/bin/clang-3.8      -rdynamic CMakeFiles/cmTC_aac38.dir/feature_tests.c.o  -o cmTC_aac38 
+Building C object CMakeFiles/cmTC_826d5.dir/feature_tests.c.o
+/usr/bin/clang-3.8   -std=c11 -o CMakeFiles/cmTC_826d5.dir/feature_tests.c.o   -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_826d5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_826d5.dir/link.txt --verbose=1
+/usr/bin/clang-3.8      -rdynamic CMakeFiles/cmTC_826d5.dir/feature_tests.c.o  -o cmTC_826d5 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -174,15 +174,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_35cfa/fast"
+Run Build Command:"/usr/bin/make" "cmTC_c3ea0/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_35cfa.dir/build.make CMakeFiles/cmTC_35cfa.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_c3ea0.dir/build.make CMakeFiles/cmTC_c3ea0.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_35cfa.dir/feature_tests.c.o
-/usr/bin/clang-3.8   -std=c99 -o CMakeFiles/cmTC_35cfa.dir/feature_tests.c.o   -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_35cfa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35cfa.dir/link.txt --verbose=1
-/usr/bin/clang-3.8      -rdynamic CMakeFiles/cmTC_35cfa.dir/feature_tests.c.o  -o cmTC_35cfa 
+Building C object CMakeFiles/cmTC_c3ea0.dir/feature_tests.c.o
+/usr/bin/clang-3.8   -std=c99 -o CMakeFiles/cmTC_c3ea0.dir/feature_tests.c.o   -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_c3ea0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3ea0.dir/link.txt --verbose=1
+/usr/bin/clang-3.8      -rdynamic CMakeFiles/cmTC_c3ea0.dir/feature_tests.c.o  -o cmTC_c3ea0 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -196,15 +196,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_66b32/fast"
+Run Build Command:"/usr/bin/make" "cmTC_b122e/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_66b32.dir/build.make CMakeFiles/cmTC_66b32.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_b122e.dir/build.make CMakeFiles/cmTC_b122e.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_66b32.dir/feature_tests.c.o
-/usr/bin/clang-3.8   -std=c90 -o CMakeFiles/cmTC_66b32.dir/feature_tests.c.o   -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_66b32
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66b32.dir/link.txt --verbose=1
-/usr/bin/clang-3.8      -rdynamic CMakeFiles/cmTC_66b32.dir/feature_tests.c.o  -o cmTC_66b32 
+Building C object CMakeFiles/cmTC_b122e.dir/feature_tests.c.o
+/usr/bin/clang-3.8   -std=c90 -o CMakeFiles/cmTC_b122e.dir/feature_tests.c.o   -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_b122e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b122e.dir/link.txt --verbose=1
+/usr/bin/clang-3.8      -rdynamic CMakeFiles/cmTC_b122e.dir/feature_tests.c.o  -o cmTC_b122e 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -216,15 +216,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_eb349/fast"
+Run Build Command:"/usr/bin/make" "cmTC_b6152/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_eb349.dir/build.make CMakeFiles/cmTC_eb349.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_b6152.dir/build.make CMakeFiles/cmTC_b6152.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_eb349.dir/testCXXCompiler.cxx.o
-/usr/bin/clang++-3.8     -o CMakeFiles/cmTC_eb349.dir/testCXXCompiler.cxx.o -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_eb349
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb349.dir/link.txt --verbose=1
-/usr/bin/clang++-3.8       -rdynamic CMakeFiles/cmTC_eb349.dir/testCXXCompiler.cxx.o  -o cmTC_eb349 
+Building CXX object CMakeFiles/cmTC_b6152.dir/testCXXCompiler.cxx.o
+/usr/bin/clang++-3.8     -o CMakeFiles/cmTC_b6152.dir/testCXXCompiler.cxx.o -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_b6152
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6152.dir/link.txt --verbose=1
+/usr/bin/clang++-3.8       -rdynamic CMakeFiles/cmTC_b6152.dir/testCXXCompiler.cxx.o  -o cmTC_b6152 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -232,15 +232,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f62ce/fast"
+Run Build Command:"/usr/bin/make" "cmTC_92532/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_f62ce.dir/build.make CMakeFiles/cmTC_f62ce.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_92532.dir/build.make CMakeFiles/cmTC_92532.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f62ce.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/clang++-3.8     -o CMakeFiles/cmTC_f62ce.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_f62ce
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f62ce.dir/link.txt --verbose=1
-/usr/bin/clang++-3.8      -v -rdynamic CMakeFiles/cmTC_f62ce.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f62ce 
+Building CXX object CMakeFiles/cmTC_92532.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/clang++-3.8     -o CMakeFiles/cmTC_92532.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_92532
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_92532.dir/link.txt --verbose=1
+/usr/bin/clang++-3.8      -v -rdynamic CMakeFiles/cmTC_92532.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_92532 
 clang version 3.8.1-24ubuntu7 (tags/RELEASE_381/final)
 Target: x86_64-pc-linux-gnu
 Thread model: posix
@@ -254,7 +254,7 @@ Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.2.0
 Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
- "/usr/bin/ld" -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f62ce /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_f62ce.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crtn.o
+ "/usr/bin/ld" -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_92532 /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_92532.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crtn.o
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -263,15 +263,15 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f62ce/fast"]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_92532/fast"]
   ignore line: [make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f62ce.dir/build.make CMakeFiles/cmTC_f62ce.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_92532.dir/build.make CMakeFiles/cmTC_92532.dir/build]
   ignore line: [make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_f62ce.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/clang++-3.8     -o CMakeFiles/cmTC_f62ce.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_f62ce]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f62ce.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/clang++-3.8      -v -rdynamic CMakeFiles/cmTC_f62ce.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f62ce ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_92532.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/clang++-3.8     -o CMakeFiles/cmTC_92532.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_92532]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_92532.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/clang++-3.8      -v -rdynamic CMakeFiles/cmTC_92532.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_92532 ]
   ignore line: [clang version 3.8.1-24ubuntu7 (tags/RELEASE_381/final)]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
@@ -287,7 +287,7 @@ Parsed CXX implicit link information from above output:
   ignore line: [@m64]
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
-  link line: [ "/usr/bin/ld" -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f62ce /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_f62ce.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crtn.o]
+  link line: [ "/usr/bin/ld" -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_92532 /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../.. -L/usr/lib/llvm-3.8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_92532.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/bin/ld] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
@@ -296,7 +296,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f62ce] ==> ignore
+    arg [cmTC_92532] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/7.2.0/crtbegin.o] ==> ignore
@@ -309,7 +309,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/llvm-3.8/bin/../lib] ==> dir [/usr/lib/llvm-3.8/bin/../lib]
     arg [-L/lib] ==> dir [/lib]
     arg [-L/usr/lib] ==> dir [/usr/lib]
-    arg [CMakeFiles/cmTC_f62ce.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_92532.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -338,15 +338,15 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d5bd2/fast"
+Run Build Command:"/usr/bin/make" "cmTC_25a8c/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_d5bd2.dir/build.make CMakeFiles/cmTC_d5bd2.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_25a8c.dir/build.make CMakeFiles/cmTC_25a8c.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d5bd2.dir/feature_tests.cxx.o
-/usr/bin/clang++-3.8    -std=c++1z -o CMakeFiles/cmTC_d5bd2.dir/feature_tests.cxx.o -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_d5bd2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5bd2.dir/link.txt --verbose=1
-/usr/bin/clang++-3.8       -rdynamic CMakeFiles/cmTC_d5bd2.dir/feature_tests.cxx.o  -o cmTC_d5bd2 
+Building CXX object CMakeFiles/cmTC_25a8c.dir/feature_tests.cxx.o
+/usr/bin/clang++-3.8    -std=c++1z -o CMakeFiles/cmTC_25a8c.dir/feature_tests.cxx.o -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_25a8c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25a8c.dir/link.txt --verbose=1
+/usr/bin/clang++-3.8       -rdynamic CMakeFiles/cmTC_25a8c.dir/feature_tests.cxx.o  -o cmTC_25a8c 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -413,15 +413,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_730a8/fast"
+Run Build Command:"/usr/bin/make" "cmTC_f2443/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_730a8.dir/build.make CMakeFiles/cmTC_730a8.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_f2443.dir/build.make CMakeFiles/cmTC_f2443.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_730a8.dir/feature_tests.cxx.o
-/usr/bin/clang++-3.8    -std=c++14 -o CMakeFiles/cmTC_730a8.dir/feature_tests.cxx.o -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_730a8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_730a8.dir/link.txt --verbose=1
-/usr/bin/clang++-3.8       -rdynamic CMakeFiles/cmTC_730a8.dir/feature_tests.cxx.o  -o cmTC_730a8 
+Building CXX object CMakeFiles/cmTC_f2443.dir/feature_tests.cxx.o
+/usr/bin/clang++-3.8    -std=c++14 -o CMakeFiles/cmTC_f2443.dir/feature_tests.cxx.o -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_f2443
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2443.dir/link.txt --verbose=1
+/usr/bin/clang++-3.8       -rdynamic CMakeFiles/cmTC_f2443.dir/feature_tests.cxx.o  -o cmTC_f2443 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -488,15 +488,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c4a24/fast"
+Run Build Command:"/usr/bin/make" "cmTC_db71f/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_c4a24.dir/build.make CMakeFiles/cmTC_c4a24.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_db71f.dir/build.make CMakeFiles/cmTC_db71f.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c4a24.dir/feature_tests.cxx.o
-/usr/bin/clang++-3.8    -std=c++11 -o CMakeFiles/cmTC_c4a24.dir/feature_tests.cxx.o -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c4a24
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4a24.dir/link.txt --verbose=1
-/usr/bin/clang++-3.8       -rdynamic CMakeFiles/cmTC_c4a24.dir/feature_tests.cxx.o  -o cmTC_c4a24 
+Building CXX object CMakeFiles/cmTC_db71f.dir/feature_tests.cxx.o
+/usr/bin/clang++-3.8    -std=c++11 -o CMakeFiles/cmTC_db71f.dir/feature_tests.cxx.o -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_db71f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db71f.dir/link.txt --verbose=1
+/usr/bin/clang++-3.8       -rdynamic CMakeFiles/cmTC_db71f.dir/feature_tests.cxx.o  -o cmTC_db71f 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -563,15 +563,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ba726/fast"
+Run Build Command:"/usr/bin/make" "cmTC_28ca8/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_ba726.dir/build.make CMakeFiles/cmTC_ba726.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_28ca8.dir/build.make CMakeFiles/cmTC_28ca8.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ba726.dir/feature_tests.cxx.o
-/usr/bin/clang++-3.8    -std=c++98 -o CMakeFiles/cmTC_ba726.dir/feature_tests.cxx.o -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_ba726
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba726.dir/link.txt --verbose=1
-/usr/bin/clang++-3.8       -rdynamic CMakeFiles/cmTC_ba726.dir/feature_tests.cxx.o  -o cmTC_ba726 
+Building CXX object CMakeFiles/cmTC_28ca8.dir/feature_tests.cxx.o
+/usr/bin/clang++-3.8    -std=c++98 -o CMakeFiles/cmTC_28ca8.dir/feature_tests.cxx.o -c /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_28ca8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28ca8.dir/link.txt --verbose=1
+/usr/bin/clang++-3.8       -rdynamic CMakeFiles/cmTC_28ca8.dir/feature_tests.cxx.o  -o cmTC_28ca8 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -636,15 +636,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_72c9f/fast"
+Run Build Command:"/usr/bin/make" "cmTC_66a86/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_72c9f.dir/build.make CMakeFiles/cmTC_72c9f.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_66a86.dir/build.make CMakeFiles/cmTC_66a86.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_72c9f.dir/CheckFunctionExists.c.o
-/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_72c9f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
-Linking C executable cmTC_72c9f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72c9f.dir/link.txt --verbose=1
-/usr/bin/clang-3.8  -DCHECK_FUNCTION_EXISTS=XOpenDisplay    -rdynamic CMakeFiles/cmTC_72c9f.dir/CheckFunctionExists.c.o  -o cmTC_72c9f /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+Building C object CMakeFiles/cmTC_66a86.dir/CheckFunctionExists.c.o
+/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_66a86.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_66a86
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66a86.dir/link.txt --verbose=1
+/usr/bin/clang-3.8  -DCHECK_FUNCTION_EXISTS=XOpenDisplay    -rdynamic CMakeFiles/cmTC_66a86.dir/CheckFunctionExists.c.o  -o cmTC_66a86 /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -652,15 +652,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Determining if the function gethostbyname exists passed with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_bca6d/fast"
+Run Build Command:"/usr/bin/make" "cmTC_d7a31/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_bca6d.dir/build.make CMakeFiles/cmTC_bca6d.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_d7a31.dir/build.make CMakeFiles/cmTC_d7a31.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bca6d.dir/CheckFunctionExists.c.o
-/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_bca6d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
-Linking C executable cmTC_bca6d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bca6d.dir/link.txt --verbose=1
-/usr/bin/clang-3.8  -DCHECK_FUNCTION_EXISTS=gethostbyname    -rdynamic CMakeFiles/cmTC_bca6d.dir/CheckFunctionExists.c.o  -o cmTC_bca6d 
+Building C object CMakeFiles/cmTC_d7a31.dir/CheckFunctionExists.c.o
+/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_d7a31.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d7a31
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7a31.dir/link.txt --verbose=1
+/usr/bin/clang-3.8  -DCHECK_FUNCTION_EXISTS=gethostbyname    -rdynamic CMakeFiles/cmTC_d7a31.dir/CheckFunctionExists.c.o  -o cmTC_d7a31 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -668,15 +668,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Determining if the function connect exists passed with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_36761/fast"
+Run Build Command:"/usr/bin/make" "cmTC_a86f7/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_36761.dir/build.make CMakeFiles/cmTC_36761.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_a86f7.dir/build.make CMakeFiles/cmTC_a86f7.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_36761.dir/CheckFunctionExists.c.o
-/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_36761.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
-Linking C executable cmTC_36761
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36761.dir/link.txt --verbose=1
-/usr/bin/clang-3.8  -DCHECK_FUNCTION_EXISTS=connect    -rdynamic CMakeFiles/cmTC_36761.dir/CheckFunctionExists.c.o  -o cmTC_36761 
+Building C object CMakeFiles/cmTC_a86f7.dir/CheckFunctionExists.c.o
+/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_a86f7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a86f7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a86f7.dir/link.txt --verbose=1
+/usr/bin/clang-3.8  -DCHECK_FUNCTION_EXISTS=connect    -rdynamic CMakeFiles/cmTC_a86f7.dir/CheckFunctionExists.c.o  -o cmTC_a86f7 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -684,15 +684,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Determining if the function remove exists passed with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_25380/fast"
+Run Build Command:"/usr/bin/make" "cmTC_c2ada/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_25380.dir/build.make CMakeFiles/cmTC_25380.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_c2ada.dir/build.make CMakeFiles/cmTC_c2ada.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_25380.dir/CheckFunctionExists.c.o
-/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_25380.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
-Linking C executable cmTC_25380
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25380.dir/link.txt --verbose=1
-/usr/bin/clang-3.8  -DCHECK_FUNCTION_EXISTS=remove    -rdynamic CMakeFiles/cmTC_25380.dir/CheckFunctionExists.c.o  -o cmTC_25380 
+Building C object CMakeFiles/cmTC_c2ada.dir/CheckFunctionExists.c.o
+/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_c2ada.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c2ada
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2ada.dir/link.txt --verbose=1
+/usr/bin/clang-3.8  -DCHECK_FUNCTION_EXISTS=remove    -rdynamic CMakeFiles/cmTC_c2ada.dir/CheckFunctionExists.c.o  -o cmTC_c2ada 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -700,15 +700,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Determining if the function shmat exists passed with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6d7b9/fast"
+Run Build Command:"/usr/bin/make" "cmTC_6326c/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_6d7b9.dir/build.make CMakeFiles/cmTC_6d7b9.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_6326c.dir/build.make CMakeFiles/cmTC_6326c.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6d7b9.dir/CheckFunctionExists.c.o
-/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_6d7b9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
-Linking C executable cmTC_6d7b9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d7b9.dir/link.txt --verbose=1
-/usr/bin/clang-3.8  -DCHECK_FUNCTION_EXISTS=shmat    -rdynamic CMakeFiles/cmTC_6d7b9.dir/CheckFunctionExists.c.o  -o cmTC_6d7b9 
+Building C object CMakeFiles/cmTC_6326c.dir/CheckFunctionExists.c.o
+/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_6326c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6326c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6326c.dir/link.txt --verbose=1
+/usr/bin/clang-3.8  -DCHECK_FUNCTION_EXISTS=shmat    -rdynamic CMakeFiles/cmTC_6326c.dir/CheckFunctionExists.c.o  -o cmTC_6326c 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 
@@ -716,15 +716,15 @@ make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/b
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
 Change Dir: /home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_22b1f/fast"
+Run Build Command:"/usr/bin/make" "cmTC_56ea7/fast"
 make[1]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_22b1f.dir/build.make CMakeFiles/cmTC_22b1f.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_56ea7.dir/build.make CMakeFiles/cmTC_56ea7.dir/build
 make[2]: Entering directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_22b1f.dir/CheckFunctionExists.c.o
-/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_22b1f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
-Linking C executable cmTC_22b1f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22b1f.dir/link.txt --verbose=1
-/usr/bin/clang-3.8  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    -rdynamic CMakeFiles/cmTC_22b1f.dir/CheckFunctionExists.c.o  -o cmTC_22b1f -lICE 
+Building C object CMakeFiles/cmTC_56ea7.dir/CheckFunctionExists.c.o
+/usr/bin/clang-3.8   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_56ea7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_56ea7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56ea7.dir/link.txt --verbose=1
+/usr/bin/clang-3.8  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    -rdynamic CMakeFiles/cmTC_56ea7.dir/CheckFunctionExists.c.o  -o cmTC_56ea7 -lICE 
 make[2]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/natan/Documents/Island_Life/island-life-game/build/CMakeFiles/CMakeTmp'
 

@@ -21,9 +21,9 @@ enum Camera_Movement {
 };
 
 // Default camera values
-const GLfloat YAW        =  -90.0f;
-const GLfloat PITCH      =  0.0f;
-const GLfloat SPEED      =  4.0f;
+const GLfloat YAW        =  -180.0f;
+const GLfloat PITCH      =  -14.0f;
+const GLfloat SPEED      =  10.0f;
 const GLfloat SENSITIVTY =  0.3f;
 const GLfloat ZOOM       =  45.0f;
 
@@ -90,7 +90,8 @@ public:
             this->Position += glm::normalize(glm::cross(this->Front, this->Up)) * velocity;
             //this->Position += this->Right * velocity;
 
-        if(this->Position.y >= 0.8)
+        this->Position.y = 0;
+        /*if(this->Position.y >= 0.8)
             this->Position.y = 0.8;
         if(this->Position.y <= -1)
             this->Position.y = -1;

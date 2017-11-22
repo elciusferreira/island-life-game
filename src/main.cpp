@@ -2,6 +2,8 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <vector>
+
 // GLEW
 #define GLEW_STATIC
 #include <GL/glew.h>
@@ -27,6 +29,7 @@
 
 // Other Libs
 #include <SOIL.h>
+#include "Itens.h"
 
 // Properties
 GLuint screenWidth = 800, screenHeight = 600;
@@ -42,12 +45,30 @@ GLfloat colorOffsetB = 1.0f;
 
 glm::vec3 lightColor(colorOffsetR, colorOffsetG, colorOffsetB);
 
-// TEST DISPLAY MESSAGE
-int range= 3;
+// MISSIONS
+std::vector<Itens> priority;
+
+// GAME MISSIONS
+int mission= 0;
+// GAME DIALOG BEGIN
+bool showMessageStart = true;
+bool canInteractStart = false;
+// START GAME
+bool showGame = false;
+// DIALOG WITH TADEU
+bool showDialogTadeu = false;
+bool showFinishMission = false;
+bool showCollect = false;
+bool showCollectOk = false;
+bool positionMission = false;
+
+
 bool showMessage = false;
 bool positionWood = false;
+bool colectWood = false;
 glm::vec3 posicaoMadeira = glm::vec3(8.0f, 0.0f, -11.0f);
 /// Holds all state information relevant to a character as loaded using FreeType
+std::string message;
 struct Character {
     GLuint TextureID;   // ID handle of the glyph texture
     glm::ivec2 Size;    // Size of glyph
@@ -65,8 +86,8 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void Do_Movement();
 void RenderText(Shader &shader, std::string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color);
 
-// Camera
-Camera camera(glm::vec3(4.0f, -1.0f, 0.0f));
+// Camera 
+Camera camera(glm::vec3(5.7f, 0.0f, 2.0f));
 bool keys[1024];
 bool firstMouse = true;
 GLfloat lastX, lastY;
@@ -159,6 +180,18 @@ int main()
 };
 
 // Shaders - - - -
+    // CREATE MISSIONS
+    Itens tadeu(glm::vec3(0.0f, -2.5f, 2.0f));
+    Itens madeira(glm::vec3(8.0f, 0.0f, -11.0f));
+    Itens corda(glm::vec3(2.0f,0.0f,-25.0f));
+    Itens alimentos(glm::vec3(20.0f,0.0f,16.0f));
+    Itens barco(glm::vec3(0.0f,0.0f,0.0f));
+
+    priority.push_back(tadeu);
+    priority.push_back(madeira);
+    priority.push_back(corda);
+    priority.push_back(alimentos);
+    priority.push_back(barco);
 
     // Setup and compile our shaders
     Shader lightingShader("resources/shaders/lighting.vs", "resources/shaders/lighting.frag");
@@ -437,11 +470,9 @@ skyboxShader.setInt("skybox", 0);
 
                 lampShader.Use();
         glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp7));
-                
-                if(showMessage)
-                    Lamp7.Draw(lampShader);
+            
 
-                RenderText(shader, "Pega ai o vareto!!", screenWidth/2, screenHeight/2, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                
         /*lightingShader.Use();
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_map));
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
@@ -492,6 +523,68 @@ skyboxShader.setInt("skybox", 0);
         else
             alpha += 0.05;
 
+
+
+        // GAME INTRO
+        if(showMessageStart){
+            if(!canInteractStart){
+                message = "Fale com Tadeu, ou voce ira se foder!!!";
+                RenderText(shader, message, screenWidth/4, screenHeight/4, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+            }
+            else{
+                RenderText(shader, "Eu sou o grande Tadeu", screenWidth/3, screenHeight/4, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                RenderText(shader, "Se quiser sobreviver, siga minhas instrucoes", screenWidth/4, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                RenderText(shader, "Pressione Y para aceitar!", screenWidth/2, screenHeight/6, 0.2f, glm::vec3(1.0f, 1.0f, 1.0f));
+            }
+        }
+        // GAME START
+        if(showGame){
+            if(showCollect){
+                RenderText(shader, "Para coletar, pressione E", screenWidth/3, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+            }
+            if(showCollectOk){
+                RenderText(shader, "Coletado com sucesso!", screenWidth/3, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+            }
+            switch(mission){
+                case 1:
+                    if(showDialogTadeu){
+                        RenderText(shader, "Bela decisão, jovem!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "Vamos lhe tirar daqui, me escute!", screenWidth/4, screenHeight/3, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "Me traga MADEIRA!!!", screenWidth/2, screenHeight/4, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                    }
+                    
+                    break;
+
+                case 2:
+                    if(showDialogTadeu){
+                        RenderText(shader, "Bom garoto!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "Agora, me traga uma corda!", screenWidth/2, screenHeight/3, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                    }
+                    break;
+
+                case 3:
+                    if(showDialogTadeu){
+                        RenderText(shader, "Boa jovem!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "Agora, procure algo pra comer!", screenWidth/3, screenHeight/3, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "Enquanto eu faço a magica!!", screenWidth/3, screenHeight/4, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                    }
+                    break;
+
+                case 4:
+                    if(showDialogTadeu){
+                        RenderText(shader, "FodACEEEEE!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "GAME OVERR!!!!!", screenWidth/2, screenHeight/4, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+                    }
+                    break;
+            
+                default:
+                    
+                    break;
+
+            }
+            
+        }
+
     // draw skybox as last
     glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
     skyboxShader.Use();
@@ -533,13 +626,26 @@ void Do_Movement()
         if(keys[GLFW_KEY_D])
             camera.ProcessKeyboard(RIGHT, deltaTime, offsetY);
 
-        positionWood= false; 
-        if((posicaoMadeira.x - range) <= camera.Position.x && (posicaoMadeira.x + range) >= camera.Position.x
-                && (posicaoMadeira.z - range) <=camera.Position.z && (posicaoMadeira.z + range) >= camera.Position.z){
-            std::cout<<"T\n";
-            positionWood= true;            
+        // TALK WITH TADEU
+        canInteractStart = false;
+        showDialogTadeu = false;
+        if(priority.begin()->isInside(camera.Position)){
+            canInteractStart = true;
+            showDialogTadeu = true;
+            if(priority.at(mission).getVisited()){
+                mission++;
+            }
+            std::cout<< "aceitou!";
         }
-         
+        
+        // MISSION
+        positionMission= false;
+        showCollectOk = false;
+        if(priority.at(mission).isInside(camera.Position) && !priority.at(mission).getVisited()){
+            positionMission = true;
+        }
+
+        
 
         if(theta > 360)
             theta = 0;
@@ -560,6 +666,25 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     KEY = key;
     if(key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
         glfwSetWindowShouldClose(window, GL_TRUE);
+
+    if(key == GLFW_KEY_Y && action == GLFW_PRESS){
+        // Finish mission 1
+        showMessageStart = false;
+        // Start mission 2
+        showGame = true;
+        mission++;
+        std::cout<<"Missao 0, concluida!";
+    }
+
+    if(key == GLFW_KEY_E && action == GLFW_PRESS){
+        if(showCollect){
+            showCollect= false;
+            showCollectOk = true;
+            priority.at(mission).setVisited(true);
+            std::cout<<"Missao 1, concluida!";
+        }
+        std::cout<<"E";
+    }
 
     if((camera.Position.x > -7.5)&&(camera.Position.x < -5)&&(camera.Position.z > -5)&&(camera.Position.z < -3)&&(keys[GLFW_KEY_E])&&(!enableKey))
         glfwSetWindowShouldClose(window, GL_TRUE);
@@ -585,12 +710,17 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
     lastX = xpos;
     lastY = ypos;
 
-    std::cout<<camera.Front.y<<"\n";
     camera.ProcessMouseMovement(xoffset, yoffset);
-    if(camera.Front.y <= -1 && camera.Front.y >=0.8 && positionWood){
-            showMessage= true;
-            std::cout<<"TRUE!\n";
+
+
+    std::cout<<camera.Front.x<< " "<< camera.Front.y<< " " <<camera.Front.z<<"\n";
+    
+    showCollect= false;
+    if(priority.at(mission).isLooking(camera.Front.y) && positionMission && !priority.at(mission).getVisited()){
+        showCollect= true;
     }
+    if(camera.Front.y>= -0.80)
+        showCollectOk = false;
 
 }
 
