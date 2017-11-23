@@ -66,6 +66,14 @@ GL/gl.h
 GL/glu.h
 -
 
+../include/GameTime.h
+iostream
+-
+time.h
+-
+sstream
+-
+
 ../include/Itens.h
 glm/glm.hpp
 -
@@ -1193,4 +1201,6 @@ Itens.h
 /home/natan/Documents/Island_Life/island-life-game/src/Itens.h
 Colision.h
 /home/natan/Documents/Island_Life/island-life-game/src/Colision.h
+GameTime.h
+/home/natan/Documents/Island_Life/island-life-game/src/GameTime.h
 

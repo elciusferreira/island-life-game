@@ -6,6 +6,7 @@ CMakeFiles/PROGRAM.dir/src/main.cpp.o
  ../include/Colision.h
  ../include/GL/glew.h
  ../include/GLFW/glfw3.h
+ ../include/GameTime.h
  ../include/Itens.h
  ../include/Mesh.h
  ../include/Model.h

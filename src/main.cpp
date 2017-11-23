@@ -31,6 +31,7 @@
 #include <SOIL.h>
 #include "Itens.h"
 #include "Colision.h"
+#include "GameTime.h"
 
 // Properties
 GLuint screenWidth = 800, screenHeight = 600;
@@ -51,6 +52,8 @@ std::vector<Itens> priority;
 
 // GAME MISSIONS
 int mission= 0;
+int difficulty=1;
+bool chooseDifficulty = false;
 // GAME DIALOG BEGIN
 bool showMessageStart = true;
 bool canInteractStart = false;
@@ -62,6 +65,12 @@ bool showFinishMission = false;
 bool showCollect = false;
 bool showCollectOk = false;
 bool positionMission = false;
+
+// GAME TIME
+bool runtime= true;
+int timeGame;
+GameTime gameTime;
+std::string showTime;
 
 // COLISIONS
 Colision testColision;
@@ -315,15 +324,42 @@ skyboxShader.setInt("skybox", 0);
 // Models - - - -
 
 
-    while(KEY!=GLFW_KEY_ENTER)
-    {
-        glfwSetWindowTitle(window, "Home");
-
+    while(!chooseDifficulty){
+    
+        glfwSetWindowTitle(window, "Setup");
         glfwPollEvents();
+
         // Clear the colorbuffer
-        glClearColor(0.0f, 0.0f, 0.5f, 1.0f);
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        
+        if(KEY==GLFW_KEY_ESCAPE){
+            glfwTerminate();
+            return 0;
+        }
+
+        RenderText(shader, "Enter para iniciar", screenWidth/3, screenHeight/1.1, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));    
+        RenderText(shader, "Dificuldades!", screenWidth/3, screenHeight/2+20, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));    
+        RenderText(shader, "1- Facil!", screenWidth/3+20, screenHeight/4+120, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));    
+        RenderText(shader, "2- Medio!", screenWidth/3+20, screenHeight/4+80, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));    
+        RenderText(shader, "3- Dificil!", screenWidth/3+20, screenHeight/4+40, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));    
+       
+        if(KEY == GLFW_KEY_1){
+            difficulty = 1;
+            chooseDifficulty= true;
+        }
+        if(KEY == GLFW_KEY_2){
+            difficulty = 2;
+            chooseDifficulty= true;
+        }
+        if(KEY == GLFW_KEY_3){
+            difficulty = 3;
+            chooseDifficulty= true;
+        }
+
+
         glfwSwapBuffers(window);
+
     }
 
     glfwSetWindowTitle(window, "Island Life - The Game");
@@ -360,7 +396,21 @@ skyboxShader.setInt("skybox", 0);
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 
-//LOOP - - - -
+    //SET GAME CONFIGURATION
+    switch(difficulty){
+        case 1:
+            timeGame = 180;
+            break;
+        case 2:
+            timeGame = 120;
+            break;
+        case 3:
+            timeGame = 10;
+            break;
+    }
+
+    gameTime.setTime(timeGame);
+    gameTime.startTime();
     // Game loop
     while(!glfwWindowShouldClose(window))
     {
@@ -369,6 +419,7 @@ skyboxShader.setInt("skybox", 0);
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
 
+          
         // Check and call events
         glfwPollEvents();
         Do_Movement();
@@ -614,67 +665,84 @@ skyboxShader.setInt("skybox", 0);
         else
             alpha += 0.05;
 
-
-
-        // GAME INTRO
-        if(showMessageStart){
-            if(!canInteractStart){
-                message = "Fale com Tadeu, ou voce ira se foder!!!";
-                RenderText(shader, message, screenWidth/4, screenHeight/4, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+        // GAME TIME
+        if(!gameTime.isEndGame()){
+            if(gameTime.isFinishTime()){
+                RenderText(shader, "GAME OVER!", screenWidth/3, screenHeight/1.1, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));    
+                RenderText(shader, "Desfrute da eternidade preso nesta ilha!", 30, screenHeight/2, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+                runtime= false;
             }
             else{
-                RenderText(shader, "Eu sou o grande Tadeu", screenWidth/3, screenHeight/4, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                RenderText(shader, "Se quiser sobreviver, siga minhas instrucoes", screenWidth/4, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
-                RenderText(shader, "Pressione Y para aceitar!", screenWidth/2, screenHeight/6, 0.2f, glm::vec3(1.0f, 1.0f, 1.0f));
+                RenderText(shader, gameTime.getTime(), screenWidth/3, screenHeight/1.1, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f)); 
             }
         }
-        // GAME START
-        if(showGame){
-            if(showCollect){
-                RenderText(shader, "Para coletar, pressione E", screenWidth/3, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+
+        if(runtime){
+            // GAME INTRO
+            if(showMessageStart){
+                if(!canInteractStart){
+                    message = "Fale com Tadeu, ou voce ira se foder!!!";
+                    RenderText(shader, message, screenWidth/4, screenHeight/4, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                }
+                else{
+                    RenderText(shader, "Eu sou o grande Tadeu", screenWidth/3, screenHeight/4, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                    RenderText(shader, "Se quiser sobreviver, siga minhas instrucoes", screenWidth/4, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                    RenderText(shader, "Pressione Y para aceitar!", screenWidth/2, screenHeight/6, 0.2f, glm::vec3(1.0f, 1.0f, 1.0f));
+                }
             }
-            if(showCollectOk){
-                RenderText(shader, "Coletado com sucesso!", screenWidth/3, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+            // GAME START
+            if(showGame){
+                if(showCollect){
+                    RenderText(shader, "Para coletar, pressione E", screenWidth/3, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                }
+                if(showCollectOk){
+                    RenderText(shader, "Coletado com sucesso!", screenWidth/3, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                }
+                switch(mission){
+                    case 1:
+                        if(showDialogTadeu){
+                            RenderText(shader, "Bela decisão, jovem!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                            RenderText(shader, "Vamos lhe tirar daqui, me escute!", screenWidth/4, screenHeight/3, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                            RenderText(shader, "Me traga MADEIRA!!!", screenWidth/2, screenHeight/4, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        }
+
+                        break;
+
+                    case 2:
+                        if(showDialogTadeu){
+                            RenderText(shader, "Bom garoto!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                            RenderText(shader, "Agora, me traga uma corda!", screenWidth/2, screenHeight/3, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        }
+                        break;
+
+                    case 3:
+                        if(showDialogTadeu){
+                            RenderText(shader, "Boa jovem!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                            RenderText(shader, "Agora, procure algo pra comer!", screenWidth/3, screenHeight/3, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                            RenderText(shader, "Enquanto eu faço a magica!!", screenWidth/3, screenHeight/4, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        }
+                        break;
+
+                    case 4:
+                        if(showDialogTadeu){
+                            gameTime.setEndGame(true);
+                            RenderText(shader, "FodACEEEEE!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                            RenderText(shader, "GAME OVERR!!!!!", screenWidth/2, screenHeight/4, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        }
+                        break;
+
+                    default:
+
+                        break;
+
+                }
             }
-            switch(mission){
-                case 1:
-                    if(showDialogTadeu){
-                        RenderText(shader, "Bela decisão, jovem!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                        RenderText(shader, "Vamos lhe tirar daqui, me escute!", screenWidth/4, screenHeight/3, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
-                        RenderText(shader, "Me traga MADEIRA!!!", screenWidth/2, screenHeight/4, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
-                    }
-
-                    break;
-
-                case 2:
-                    if(showDialogTadeu){
-                        RenderText(shader, "Bom garoto!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                        RenderText(shader, "Agora, me traga uma corda!", screenWidth/2, screenHeight/3, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                    }
-                    break;
-
-                case 3:
-                    if(showDialogTadeu){
-                        RenderText(shader, "Boa jovem!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                        RenderText(shader, "Agora, procure algo pra comer!", screenWidth/3, screenHeight/3, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                        RenderText(shader, "Enquanto eu faço a magica!!", screenWidth/3, screenHeight/4, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
-                    }
-                    break;
-
-                case 4:
-                    if(showDialogTadeu){
-                        RenderText(shader, "FodACEEEEE!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                        RenderText(shader, "GAME OVERR!!!!!", screenWidth/2, screenHeight/4, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
-                    }
-                    break;
-
-                default:
-
-                    break;
-
-            }
-
         }
+        else{
+            if(showDialogTadeu)
+                RenderText(shader, "SE FODEU KKKKKK!", screenWidth/2, screenHeight/8, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f)); 
+       }
+
 
     // draw skybox as last
     glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
@@ -776,7 +844,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
             showCollect= false;
             showCollectOk = true;
             priority.at(mission).setVisited(true);
-            std::cout<<"Missao 1, concluida!";
+            std::cout<<"Missao concluida!";
         }
         std::cout<<"E";
     }
