@@ -332,6 +332,9 @@ skyboxShader.setInt("skybox", 0);
     //Model Map("resources/models/prisao.obj");
 		Model Statue("resources/models/EasterIslandStatue.obj");
 		Model Bonfire("resources/models/bonfire.obj");
+    std::cout << "AQUI 1" << '\n';
+    Model Skeleton("resources/models/skeleton.obj");
+    std::cout << "AQUI 2" << '\n';
 		Model Wood("resources/models/wood.obj");
     Model Vines("resources/models/vines.obj");
     Model Orange("resources/models/orange.obj");
@@ -339,7 +342,7 @@ skyboxShader.setInt("skybox", 0);
     Model Apple("resources/models/apple.obj");
     Model Banana("resources/models/banana.obj");
     Model Island("resources/models/Small_Tropical_Island.obj");
-    
+    Model Ocean("resources/models/ocean.obj");
     Model Lamp("resources/models/Lamp.obj");
     /*Model Lamp2("resources/models/Lamp.obj");
     Model Lamp3("resources/models/Lamp.obj");
@@ -404,8 +407,10 @@ skyboxShader.setInt("skybox", 0);
         // Draw the loaded model
         //glm::mat4 model_map;
 				glm::mat4 model_island;
+        glm::mat4 model_ocean;
 				glm::mat4 model_statue;
 				glm::mat4 model_bonfire;
+        glm::mat4 model_skeleton;
 				glm::mat4 model_wood;
         glm::mat4 model_vine1;
         glm::mat4 model_vine2;
@@ -427,18 +432,21 @@ skyboxShader.setInt("skybox", 0);
         model_island = glm::translate(model_island, glm::vec3(26.0f, -5.0f, -15.0f));
         model_island = glm::scale(model_island, glm::vec3(0.10f, 0.10f, 0.10f));
 
-        //model_map = glm::translate(model_map, glm::vec3(0.0f, -2.5f, 0.0f));
-        //model_map = glm::rotate(model_map, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        model_ocean = glm::translate(model_ocean, glm::vec3(-125.0f, 2.0f, -26.0f));
+        model_ocean = glm::scale(model_ocean, glm::vec3(50.0f, 50.0f, 50.0f));
+        model_ocean = glm::rotate(model_ocean, glm::radians(5.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+        model_ocean = glm::rotate(model_ocean, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
         model_statue = glm::translate(model_statue, glm::vec3(0.0f, -2.5f, 2.0f));
         model_statue = glm::rotate(model_statue, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
-        /*model_wood = glm::translate(model_wood, glm::vec3(20.0f, 1.0f, -15.0f));
-        model_wood = glm::rotate(model_wood, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));*/
-
 				model_bonfire = glm::translate(model_bonfire, glm::vec3(0.81f, -2.7f, -3.7f));
 				model_bonfire = glm::scale(model_bonfire, glm::vec3(0.15f, 0.15f, 0.15f));
-				//model_wood = glm::rotate(model_wood, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+
+        model_skeleton = glm::translate(model_skeleton, glm::vec3(5.0f, -2.6f, -0.91f));
+        model_skeleton = glm::scale(model_skeleton, glm::vec3(0.15f, 0.15f, 0.15f));
+        model_skeleton = glm::rotate(model_skeleton, glm::radians(30.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        model_skeleton = glm::rotate(model_skeleton, glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.0f));
 
 				model_wood = glm::translate(model_wood, glm::vec3(20.0f, -0.7f, -23.0f));
 				model_wood = glm::scale(model_wood, glm::vec3(0.10f, 0.10f, 0.10f));
@@ -539,6 +547,14 @@ skyboxShader.setInt("skybox", 0);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
         Bonfire.Draw(lightingShader);
 
+        lightingShader.Use();
+        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_skeleton));
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+        Skeleton.Draw(lightingShader);
+
 				lightingShader.Use();
 				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_wood));
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
@@ -603,6 +619,14 @@ skyboxShader.setInt("skybox", 0);
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
         Island.Draw(lightingShader);
+
+        lightingShader.Use();
+        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_ocean));
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+        Ocean.Draw(lightingShader);
 
         colorOffsetR = 0.5 * sin(glm::radians(alpha)) + 0.5;
         colorOffsetG = 0.5 * sin(glm::radians(2*alpha)) + 0.5;
