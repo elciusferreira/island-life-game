@@ -399,13 +399,13 @@ skyboxShader.setInt("skybox", 0);
     //SET GAME CONFIGURATION
     switch(difficulty){
         case 1:
-            timeGame = 180;
-            break;
-        case 2:
             timeGame = 120;
             break;
+        case 2:
+            timeGame = 60;
+            break;
         case 3:
-            timeGame = 10;
+            timeGame = 20;
             break;
     }
 
