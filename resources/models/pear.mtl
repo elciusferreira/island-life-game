@@ -36,4 +36,4 @@ Ni 1.000000
 d 1.000000
 illum 2
 map_Kd pear/pear_diffuse.jpg
-map_Bump pear\pear_normal_map.jpg
+map_Bump pear/pear_normal_map.jpg
