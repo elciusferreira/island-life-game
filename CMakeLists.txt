@@ -15,7 +15,7 @@ endif(WIN32)
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-list(APPEND CMAKE_CXX_FLAGS " -Wno-c++11-narrowing -std=c++11")
+list(APPEND CMAKE_CXX_FLAGS " -lsfml-audio -lsfml-system -Wno-c++11-narrowing -std=c++11")
 
 # find the required packages
 find_package(GLM REQUIRED)

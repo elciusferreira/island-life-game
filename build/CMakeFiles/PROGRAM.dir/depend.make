@@ -12,6 +12,7 @@ CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/Model.h
 CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/SOIL.h
 CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/Shader.h
 CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/Skybox.h
+CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/Sound.h
 CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/assimp/./Compiler/poppack1.h
 CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/assimp/./Compiler/pushpack1.h
 CMakeFiles/PROGRAM.dir/src/main.cpp.o: ../include/assimp/Compiler/pstdint.h

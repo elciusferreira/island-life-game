@@ -19,19 +19,19 @@ public:
 	bool isInside(glm::vec3 camera){
 		if((Position.x - boxrange) <= camera.x && (Position.x + boxrange) >= camera.x
                 && (Position.z  - boxrange) <= camera.z && (Position.z + boxrange) >= camera.z ){
-            std::cout<<"TA NO RANGE!!!\n";
+            //std::cout<<"TA NO RANGE!!!\n";
             return true;     
         }
-        std::cout<<"NAO TA NO RANGE!!!\n";
+        //std::cout<<"NAO TA NO RANGE!!!\n";
         return false;
 	}
 
 	bool isLooking(float look){
 		if(-1 <= look && -0.75 >= look ){
-            std::cout<<"TA OLHANDO!!!\n";
+           //std::cout<<"TA OLHANDO!!!\n";
             return true;     
         }
-        std::cout<<"NAO TA OLHANDO!!!\n";
+        //std::cout<<"NAO TA OLHANDO!!!\n";
         return false;
 	}
 

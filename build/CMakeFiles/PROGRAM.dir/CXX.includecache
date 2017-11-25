@@ -13,6 +13,8 @@ iomanip
 -
 iostream
 -
+Colision.h
+../include/Colision.h
 GL/glew.h
 -
 glm/glm.hpp
@@ -156,6 +158,14 @@ glm/glm.hpp
 glm/gtc/matrix_transform.hpp
 -
 glm/gtc/type_ptr.hpp
+-
+
+../include/Sound.h
+SFML/Audio.hpp
+-
+thread
+-
+iostream
 -
 
 ../include/assimp/./Compiler/poppack1.h
@@ -1199,8 +1209,8 @@ SOIL.h
 -
 Itens.h
 /home/natan/Documents/Island_Life/island-life-game/src/Itens.h
-Colision.h
-/home/natan/Documents/Island_Life/island-life-game/src/Colision.h
 GameTime.h
 /home/natan/Documents/Island_Life/island-life-game/src/GameTime.h
+Sound.h
+/home/natan/Documents/Island_Life/island-life-game/src/Sound.h
 

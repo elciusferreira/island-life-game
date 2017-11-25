@@ -22,6 +22,8 @@ public:
 
 	void startTime(){
 		time (&begin);
+		endGame = false;
+		elapsed_secs = 0;
 	}
 
 	std::string getTime(){

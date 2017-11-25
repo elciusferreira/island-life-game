@@ -21,18 +21,23 @@ public:
 		// update algoritm
 	}
 
-	bool isColision(glm::vec3 camera){
+	bool isColisionItens(glm::vec3 camera){
 		for(int i=0; i< objects.size(); i++){
 			if((objects.at(i).x - boxrange) <= camera.x && (objects.at(i).x + boxrange) >= camera.x
                 && (objects.at(i).z  - boxrange) <= camera.z && (objects.at(i).z + boxrange) >= camera.z ){
 	            return true; 
-	            std::cout<<"-----------------> BATEU!!!\n";	         
-       		}
-       		else{
-       			std::cout<< "----------------->  N BATEU\n";       			
+	            //std::cout<<"-----------------> BATEU!!!\n";	         
        		}
 		}
-		std::cout<<"NAO BATEU!!!\n";
+		//std::cout<<"NAO BATEU!!!\n";
         return false;
+	}
+
+	bool isLimitMap(glm::vec3 camera){
+		if(camera.x < -18 || camera.z > 25 || camera.z < -37){
+			std::cout<< "LIMITE!";
+			return true;
+		}
+		return false;
 	}
 };

@@ -4,6 +4,10 @@
 #include <vector>
 #include <iomanip>
 #include <iostream>
+#include "Colision.h"
+
+// COLISIONS
+Colision testColision;
 
 // GL Includes
 #include <GL/glew.h>
@@ -24,7 +28,7 @@ enum Camera_Movement {
 const GLfloat YAW        =  -180.0f;
 const GLfloat PITCH      =  -14.0f;
 const GLfloat SPEED      =  10.0f;
-const GLfloat SENSITIVTY =  0.3f;
+const GLfloat SENSITIVTY =  0.2f;
 const GLfloat ZOOM       =  45.0f;
 
 
@@ -77,24 +81,27 @@ public:
         float last_x = this->Position.x;
         float last_z = this->Position.y;
         GLfloat velocity = this->MovementSpeed * deltaTime;
-        if (direction == FORWARD)
-            this->Position += velocity * this->Front;
-            //this->Position += glm::normalize(glm::rotate(this->Front, glm::radians(this->Pitch), -this->Right)) * velocity;
-        if (direction == BACKWARD)
+        
+        if(!testColision.isColisionItens(this->Position)){
+            if (direction == FORWARD)
+                this->Position += velocity * this->Front;
+                //this->Position += glm::normalize(glm::rotate(this->Front, glm::radians(this->Pitch), -this->Right)) * velocity;
+            if (direction == BACKWARD)
+                this->Position -= velocity * this->Front;
+                //this->Position -= glm::normalize(glm::rotate(this->Front, glm::radians(this->Pitch), -this->Right)) * velocity;
+            if (direction == LEFT)
+                this->Position -= glm::normalize(glm::cross(this->Front, this->Up)) * velocity;
+                //this->Position -= this->Right * velocity;
+            if (direction == RIGHT)
+                this->Position += glm::normalize(glm::cross(this->Front, this->Up)) * velocity;
+                //this->Position += this->Right * velocity;
+        }
+        else{
             this->Position -= velocity * this->Front;
-            //this->Position -= glm::normalize(glm::rotate(this->Front, glm::radians(this->Pitch), -this->Right)) * velocity;
-        if (direction == LEFT)
-            this->Position -= glm::normalize(glm::cross(this->Front, this->Up)) * velocity;
-            //this->Position -= this->Right * velocity;
-        if (direction == RIGHT)
-            this->Position += glm::normalize(glm::cross(this->Front, this->Up)) * velocity;
-            //this->Position += this->Right * velocity;
+        }
 
-        this->Position.y = 0;
-        /*if(this->Position.y >= 0.8)
-            this->Position.y = 0.8;
-        if(this->Position.y <= -1)
-            this->Position.y = -1;
+        this->Position.y = this->Position.x/7;
+
 
             /*if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
                 cameraPos += cameraSpeed * cameraFront;
