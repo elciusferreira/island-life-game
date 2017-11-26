@@ -530,36 +530,36 @@ skyboxShader.setInt("skybox", 0);
         model_statue = glm::translate(model_statue, glm::vec3(0.0f, -2.5f, 2.0f));
         model_statue = glm::rotate(model_statue, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
-				model_bonfire = glm::translate(model_bonfire, glm::vec3(0.81f, -2.7f, -3.7f));
-				model_bonfire = glm::scale(model_bonfire, glm::vec3(0.15f, 0.15f, 0.15f));
+		model_bonfire = glm::translate(model_bonfire, glm::vec3(0.81f, -2.7f, -3.7f));
+		model_bonfire = glm::scale(model_bonfire, glm::vec3(0.15f, 0.15f, 0.15f));
 
         model_skeleton = glm::translate(model_skeleton, glm::vec3(5.0f, -2.6f, -0.91f));
         model_skeleton = glm::scale(model_skeleton, glm::vec3(0.15f, 0.15f, 0.15f));
         model_skeleton = glm::rotate(model_skeleton, glm::radians(30.0f), glm::vec3(0.0f, 1.0f, 0.0f));
         model_skeleton = glm::rotate(model_skeleton, glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.0f));
 
-				model_wood = glm::translate(model_wood, glm::vec3(20.0f, -0.7f, -23.0f));
-				model_wood = glm::scale(model_wood, glm::vec3(0.10f, 0.10f, 0.10f));
+		model_wood = glm::translate(model_wood, glm::vec3(20.0f, -0.7f, -23.0f));
+		model_wood = glm::scale(model_wood, glm::vec3(0.10f, 0.10f, 0.10f));
 
         model_vine1 = glm::translate(model_vine1, glm::vec3(24.5f, -1.0f, -6.5f));
         model_vine1 = glm::rotate(model_vine1, glm::radians(30.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-				model_vine1 = glm::scale(model_vine1, glm::vec3(0.15f, 0.15f, 0.15f));
+		model_vine1 = glm::scale(model_vine1, glm::vec3(0.15f, 0.15f, 0.15f));
 
         model_vine2 = glm::translate(model_vine2, glm::vec3(24.5f, -1.0f, -6.7f));
         model_vine2 = glm::rotate(model_vine2, glm::radians(30.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-				model_vine2 = glm::scale(model_vine2, glm::vec3(0.15f, 0.15f, 0.15f));
+		model_vine2 = glm::scale(model_vine2, glm::vec3(0.15f, 0.15f, 0.15f));
 
         model_apple = glm::translate(model_apple, glm::vec3(28.5f, 0.7f, -29.5f));
-				model_apple = glm::scale(model_apple, glm::vec3(0.005f, 0.005f, 0.005f));
+		model_apple = glm::scale(model_apple, glm::vec3(0.005f, 0.005f, 0.005f));
 
         model_pear = glm::translate(model_pear, glm::vec3(28.0f, 0.80f, -29.5f));
-				model_pear = glm::scale(model_pear, glm::vec3(0.10f, 0.10f, 0.10f));
+		model_pear = glm::scale(model_pear, glm::vec3(0.10f, 0.10f, 0.10f));
 
         //model_banana = glm::translate(model_banana, glm::vec3(29.0f, 0.75f, -23.0f));
         model_banana = glm::translate(model_banana, glm::vec3(28.0f, 0.8f, -30.0f));
         model_banana = glm::rotate(model_banana, glm::radians(20.0f), glm::vec3(0.0f, 0.0f, 1.0f));
         model_banana = glm::rotate(model_banana, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-				model_banana = glm::scale(model_banana, glm::vec3(0.07f, 0.07f, 0.07f));
+		model_banana = glm::scale(model_banana, glm::vec3(0.07f, 0.07f, 0.07f));
 
         model_orange = glm::translate(model_orange, glm::vec3(29.0f, 1.0f, -29.0f));
 				model_orange = glm::scale(model_orange, glm::vec3(0.15f, 0.15f, 0.15f));
@@ -629,8 +629,8 @@ skyboxShader.setInt("skybox", 0);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
         Statue.Draw(lightingShader);
 
-				lightingShader.Use();
-				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_bonfire));
+		lightingShader.Use();
+		glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_bonfire));
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
@@ -645,62 +645,67 @@ skyboxShader.setInt("skybox", 0);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
         Skeleton.Draw(lightingShader);
 
-				lightingShader.Use();
-				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_wood));
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
-        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
-        Wood.Draw(lightingShader);
+		if(!priority.at(1).getVisited()){
+            lightingShader.Use();
+        	glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_wood));
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+            glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+            Wood.Draw(lightingShader);
+        }
 
-        lightingShader.Use();
-				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_vine1));
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
-        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
-        Vines.Draw(lightingShader);
+        if(!priority.at(2).getVisited()){
+            lightingShader.Use();
+    		glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_vine1));
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+            glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+            Vines.Draw(lightingShader);
 
-        lightingShader.Use();
-				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_vine2));
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
-        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
-        Vines.Draw(lightingShader);
+            lightingShader.Use();
+    		glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_vine2));
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+            glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+            Vines.Draw(lightingShader);
+        }
 
-        lightingShader.Use();
-				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_apple));
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
-        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
-        Apple.Draw(lightingShader);
+        if(!priority.at(3).getVisited()){
+            lightingShader.Use();
+    	    glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_apple));
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+            glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+            Apple.Draw(lightingShader);
 
-        lightingShader.Use();
-				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_pear));
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
-        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
-        Pear.Draw(lightingShader);
+            lightingShader.Use();
+    				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_pear));
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+            glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+            Pear.Draw(lightingShader);
 
-        lightingShader.Use();
-				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_banana));
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
-        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
-        Banana.Draw(lightingShader);
+            lightingShader.Use();
+    				glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_banana));
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+            glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+            Banana.Draw(lightingShader);
 
-        lightingShader.Use();
-        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_orange));
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
-        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
-        Orange.Draw(lightingShader);
-
+            lightingShader.Use();
+            glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_orange));
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+            glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+            glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+            Orange.Draw(lightingShader);
+        }
 
         lightingShader.Use();
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_island));
