@@ -208,7 +208,7 @@ int main()
 
     testColision.start();
 
-    music.setMusic(music.begin);
+    music.setMusic(music.begin, 31);
 
     // Setup and compile our shaders
     Shader lightingShader("resources/shaders/lighting.vs", "resources/shaders/lighting.frag");
@@ -435,7 +435,7 @@ skyboxShader.setInt("skybox", 0);
             // Clear the colorbuffer
             glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-            //music.setMusic(music.loading);
+            music.setMusic(music.fail, 0);
             RenderText(shader, "VOCE PERDEU!", screenWidth/3, screenHeight/2, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f)); 
             RenderText(shader, "Enter para tentar de novo!", screenWidth/3, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));       
             if(KEY==GLFW_KEY_ENTER){
@@ -454,7 +454,7 @@ skyboxShader.setInt("skybox", 0);
             glfwSwapBuffers(window);
             continue;
         }
-
+        
 
         // Set frame time
         GLfloat currentFrame = glfwGetTime();
@@ -740,13 +740,14 @@ skyboxShader.setInt("skybox", 0);
             }
             else{
                 RenderText(shader, gameTime.getTime(), screenWidth/3, screenHeight/1.1, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f)); 
+                music.setMusic(music.game, 31);
             }
         }
 
         // GAME INTRO
         if(showMessageStart){
             if(!canInteractStart){
-                message = "Fale com Tadeu, ou voce ira se foder!!!";
+                message = "Nao e tadeu!!";
                 RenderText(shader, message, screenWidth/4, screenHeight/4, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
             }
             else{
@@ -792,7 +793,9 @@ skyboxShader.setInt("skybox", 0);
                 case 4:
                     if(showDialogTadeu){
                         gameTime.setEndGame(true);
+                        music.setMusic(music.success, 0);
                         RenderText(shader, "VOCE SOBREVIVEU!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        camera.Position.x = camera.Position.x - 0.1;
                     }
                     break;
 
