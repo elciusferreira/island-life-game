@@ -48,7 +48,7 @@ GLfloat colorOffsetB = 1.0f;
 glm::vec3 lightColor(colorOffsetR, colorOffsetG, colorOffsetB);
 
 // MISSIONS
-std::vector<Itens> priority;
+std::vector<Itens> level;
 
 // GAME MISSIONS
 int mission= 0;
@@ -197,11 +197,11 @@ int main()
     Itens alimentos(glm::vec3(28.0f, 0.8f, -30.0f));
     Itens barco(glm::vec3(-99.0f,-99.0f,-99.0f));
 
-    priority.push_back(tadeu);
-    priority.push_back(madeira);
-    priority.push_back(corda);
-    priority.push_back(alimentos);
-    priority.push_back(barco);
+    level.push_back(tadeu);
+    level.push_back(madeira);
+    level.push_back(corda);
+    level.push_back(alimentos);
+    level.push_back(barco);
 
     testColision.addObject(glm::vec3(0.0f, -2.5f, 2.0f));
     testColision.addObject(glm::vec3(0.81f, -2.7f, -3.7f));
@@ -329,25 +329,25 @@ skyboxShader.setInt("skybox", 0);
 
 
     while(!chooseDifficulty){
-    
+
         glfwSetWindowTitle(window, "Inicio");
         glfwPollEvents();
 
         // Clear the colorbuffer
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        
+
         if(KEY==GLFW_KEY_ESCAPE){
             glfwTerminate();
             return 0;
         }
 
-        RenderText(shader, "Enter para iniciar", screenWidth/3, screenHeight/1.1, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));    
-        RenderText(shader, "Dificuldades!", screenWidth/3, screenHeight/2+20, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));    
-        RenderText(shader, "1- Facil!", screenWidth/3+20, screenHeight/4+120, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));    
-        RenderText(shader, "2- Medio!", screenWidth/3+20, screenHeight/4+80, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));    
-        RenderText(shader, "3- Dificil!", screenWidth/3+20, screenHeight/4+40, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));    
-       
+        RenderText(shader, "Enter para iniciar", screenWidth/3, screenHeight/1.1, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+        RenderText(shader, "Dificuldades:", screenWidth/3, screenHeight/2+20, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+        RenderText(shader, "1- Facil", screenWidth/3+20, screenHeight/4+120, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+        RenderText(shader, "2- Medio", screenWidth/3+20, screenHeight/4+80, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+        RenderText(shader, "3- Dificil", screenWidth/3+20, screenHeight/4+40, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+
         if(KEY == GLFW_KEY_1){
             difficulty = 1;
             chooseDifficulty= true;
@@ -359,15 +359,15 @@ skyboxShader.setInt("skybox", 0);
         if(KEY == GLFW_KEY_3){
             difficulty = 3;
             chooseDifficulty= true;
-            
+
          }
 
         if(chooseDifficulty){
             glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             //music.setMusic(music.loading);
-            RenderText(shader, "Carregando...", screenWidth/3, screenHeight/2, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));    
-        
+            RenderText(shader, "Carregando...", screenWidth/3, screenHeight/2, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+
         }
 
         glfwSwapBuffers(window);
@@ -380,9 +380,7 @@ skyboxShader.setInt("skybox", 0);
     //Model Map("resources/models/prisao.obj");
 		Model Statue("resources/models/EasterIslandStatue.obj");
 		Model Bonfire("resources/models/bonfire.obj");
-    std::cout << "AQUI 1" << '\n';
     Model Skeleton("resources/models/skeleton.obj");
-    std::cout << "AQUI 2" << '\n';
 		Model Wood("resources/models/wood.obj");
     Model Vines("resources/models/vines.obj");
     Model Orange("resources/models/orange.obj");
@@ -391,7 +389,8 @@ skyboxShader.setInt("skybox", 0);
     Model Banana("resources/models/banana.obj");
     Model Island("resources/models/Small_Tropical_Island.obj");
     Model Ocean("resources/models/ocean.obj");
-    Model Lamp("resources/models/Lamp.obj");
+    Model Boat("resources/models/boat.obj");
+    //Model Lamp("resources/models/Lamp.obj");
     /*Model Lamp2("resources/models/Lamp.obj");
     Model Lamp3("resources/models/Lamp.obj");
     Model Lamp4("resources/models/Lamp.obj");
@@ -436,15 +435,15 @@ skyboxShader.setInt("skybox", 0);
             glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             //music.setMusic(music.loading);
-            RenderText(shader, "VOCE PERDEU!", screenWidth/3, screenHeight/2, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f)); 
-            RenderText(shader, "Enter para tentar de novo!", screenWidth/3, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));       
+            RenderText(shader, "VOCE PERDEU!", screenWidth/3, screenHeight/2, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+            RenderText(shader, "Digite 'Enter' para tentar de novo!", screenWidth/3, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
             if(KEY==GLFW_KEY_ENTER){
                 showGameOver = false;
                 showMessageStart = true;
                 mission = 0;
                 camera.Position = cameraBegin;
-                for(int i=0; i < priority.size(); i++){
-                    priority.at(i).setVisited(false);
+                for(int i=0; i < level.size(); i++){
+                    level.at(i).setVisited(false);
                 }
                 gameTime.startTime();
             }
@@ -461,7 +460,7 @@ skyboxShader.setInt("skybox", 0);
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
 
-          
+
         // Check and call events
         glfwPollEvents();
         Do_Movement();
@@ -508,7 +507,8 @@ skyboxShader.setInt("skybox", 0);
         glm::mat4 model_pear;
         glm::mat4 model_banana;
         glm::mat4 model_orange;
-        glm::mat4 model_lamp;
+        glm::mat4 model_boat;
+        //glm::mat4 model_lamp;
         /*glm::mat4 model_lamp2;
         glm::mat4 model_lamp3;
         glm::mat4 model_lamp4;
@@ -517,7 +517,12 @@ skyboxShader.setInt("skybox", 0);
         glm::mat4 model_lamp7;*/
 
         // Draw
+        /*model_lamp = glm::translate(model_lamp, glm::vec3(0.0f, -2.5f, 2.0f));
+        model_lamp = glm::scale(model_lamp, glm::vec3(2.0f, 2.0f, 2.0f));*/
+        //model_lamp = glm::rotate(model_lamp, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
+        model_boat = glm::translate(model_boat, glm::vec3(-13.0f, -6.0f, -0.83f));
+    		model_boat = glm::rotate(model_boat, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
         model_island = glm::translate(model_island, glm::vec3(26.0f, -5.0f, -15.0f));
         model_island = glm::scale(model_island, glm::vec3(0.10f, 0.10f, 0.10f));
@@ -528,38 +533,39 @@ skyboxShader.setInt("skybox", 0);
         model_ocean = glm::rotate(model_ocean, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
         model_statue = glm::translate(model_statue, glm::vec3(0.0f, -2.5f, 2.0f));
-        model_statue = glm::rotate(model_statue, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        //model_statue = glm::rotate(model_statue, glm::radians(20.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        model_statue = glm::rotate(model_statue, glm::radians(130.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
-		model_bonfire = glm::translate(model_bonfire, glm::vec3(0.81f, -2.7f, -3.7f));
-		model_bonfire = glm::scale(model_bonfire, glm::vec3(0.15f, 0.15f, 0.15f));
+    		model_bonfire = glm::translate(model_bonfire, glm::vec3(0.81f, -2.7f, -3.7f));
+    		model_bonfire = glm::scale(model_bonfire, glm::vec3(0.15f, 0.15f, 0.15f));
 
         model_skeleton = glm::translate(model_skeleton, glm::vec3(5.0f, -2.6f, -0.91f));
         model_skeleton = glm::scale(model_skeleton, glm::vec3(0.15f, 0.15f, 0.15f));
         model_skeleton = glm::rotate(model_skeleton, glm::radians(30.0f), glm::vec3(0.0f, 1.0f, 0.0f));
         model_skeleton = glm::rotate(model_skeleton, glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.0f));
 
-		model_wood = glm::translate(model_wood, glm::vec3(20.0f, -0.7f, -23.0f));
-		model_wood = glm::scale(model_wood, glm::vec3(0.10f, 0.10f, 0.10f));
+    		model_wood = glm::translate(model_wood, glm::vec3(20.0f, -0.7f, -23.0f));
+    		model_wood = glm::scale(model_wood, glm::vec3(0.10f, 0.10f, 0.10f));
 
         model_vine1 = glm::translate(model_vine1, glm::vec3(24.5f, -1.0f, -6.5f));
         model_vine1 = glm::rotate(model_vine1, glm::radians(30.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-		model_vine1 = glm::scale(model_vine1, glm::vec3(0.15f, 0.15f, 0.15f));
+		    model_vine1 = glm::scale(model_vine1, glm::vec3(0.15f, 0.15f, 0.15f));
 
         model_vine2 = glm::translate(model_vine2, glm::vec3(24.5f, -1.0f, -6.7f));
         model_vine2 = glm::rotate(model_vine2, glm::radians(30.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-		model_vine2 = glm::scale(model_vine2, glm::vec3(0.15f, 0.15f, 0.15f));
+		    model_vine2 = glm::scale(model_vine2, glm::vec3(0.15f, 0.15f, 0.15f));
 
         model_apple = glm::translate(model_apple, glm::vec3(28.5f, 0.7f, -29.5f));
-		model_apple = glm::scale(model_apple, glm::vec3(0.005f, 0.005f, 0.005f));
+		    model_apple = glm::scale(model_apple, glm::vec3(0.005f, 0.005f, 0.005f));
 
         model_pear = glm::translate(model_pear, glm::vec3(28.0f, 0.80f, -29.5f));
-		model_pear = glm::scale(model_pear, glm::vec3(0.10f, 0.10f, 0.10f));
+		    model_pear = glm::scale(model_pear, glm::vec3(0.10f, 0.10f, 0.10f));
 
         //model_banana = glm::translate(model_banana, glm::vec3(29.0f, 0.75f, -23.0f));
         model_banana = glm::translate(model_banana, glm::vec3(28.0f, 0.8f, -30.0f));
         model_banana = glm::rotate(model_banana, glm::radians(20.0f), glm::vec3(0.0f, 0.0f, 1.0f));
         model_banana = glm::rotate(model_banana, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-		model_banana = glm::scale(model_banana, glm::vec3(0.07f, 0.07f, 0.07f));
+		    model_banana = glm::scale(model_banana, glm::vec3(0.07f, 0.07f, 0.07f));
 
         model_orange = glm::translate(model_orange, glm::vec3(29.0f, 1.0f, -29.0f));
 				model_orange = glm::scale(model_orange, glm::vec3(0.15f, 0.15f, 0.15f));
@@ -582,9 +588,9 @@ skyboxShader.setInt("skybox", 0);
         model_lamp7 = glm::translate(model_lamp7, glm::vec3(9.0f, 6.8f, -11.0f));
         model_lamp7 = glm::rotate(model_lamp7, glm::radians(0.0f), glm::vec3(0.0f, 0.0f, 1.0f));*/
 
-        lampShader.Use();
+        /*lampShader.Use();
 				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp));
-        Lamp.Draw(lampShader);
+        Lamp.Draw(lampShader);*/
 
         /*lampShader.Use();
 				glUniformMatrix4fv(glGetUniformLocation(lampShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_lamp2));
@@ -629,13 +635,21 @@ skyboxShader.setInt("skybox", 0);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
         Statue.Draw(lightingShader);
 
-		lightingShader.Use();
-		glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_bonfire));
+    		lightingShader.Use();
+    		glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_bonfire));
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
         Bonfire.Draw(lightingShader);
+
+        lightingShader.Use();
+        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_boat));
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+        Boat.Draw(lightingShader);
 
         lightingShader.Use();
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_skeleton));
@@ -645,9 +659,9 @@ skyboxShader.setInt("skybox", 0);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
         Skeleton.Draw(lightingShader);
 
-		if(!priority.at(1).getVisited()){
+    		if(!level.at(1).getVisited()){
             lightingShader.Use();
-        	glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_wood));
+        	  glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_wood));
             glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
             glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
             glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
@@ -655,9 +669,9 @@ skyboxShader.setInt("skybox", 0);
             Wood.Draw(lightingShader);
         }
 
-        if(!priority.at(2).getVisited()){
+        if(!level.at(2).getVisited()){
             lightingShader.Use();
-    		glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_vine1));
+    		    glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_vine1));
             glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
             glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
             glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
@@ -665,7 +679,7 @@ skyboxShader.setInt("skybox", 0);
             Vines.Draw(lightingShader);
 
             lightingShader.Use();
-    		glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_vine2));
+    		    glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_vine2));
             glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
             glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
             glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
@@ -673,9 +687,9 @@ skyboxShader.setInt("skybox", 0);
             Vines.Draw(lightingShader);
         }
 
-        if(!priority.at(3).getVisited()){
+        if(!level.at(3).getVisited()){
             lightingShader.Use();
-    	    glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_apple));
+    	      glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_apple));
             glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
             glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
             glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
@@ -739,7 +753,7 @@ skyboxShader.setInt("skybox", 0);
                 showGameOver = true;
             }
             else{
-                RenderText(shader, gameTime.getTime(), screenWidth/3, screenHeight/1.1, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f)); 
+                RenderText(shader, gameTime.getTime(), screenWidth/3, screenHeight/1.1, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
             }
         }
 
@@ -802,7 +816,7 @@ skyboxShader.setInt("skybox", 0);
 
             }
         }
-    
+
 
 
     // draw skybox as last
@@ -850,15 +864,15 @@ void Do_Movement()
             camera.ProcessKeyboard(LEFT, deltaTime, offsetY);
         if(keys[GLFW_KEY_D])
             camera.ProcessKeyboard(RIGHT, deltaTime, offsetY);
-    
+
 
         // TALK WITH TADEU
         canInteractStart = false;
         showDialogTadeu = false;
-        if(priority.begin()->isInside(camera.Position)){
+        if(level.begin()->isInside(camera.Position)){
             canInteractStart = true;
             showDialogTadeu = true;
-            if(priority.at(mission).getVisited()){
+            if(level.at(mission).getVisited()){
                 mission++;
             }
             std::cout<< "aceitou!";
@@ -867,7 +881,7 @@ void Do_Movement()
         // MISSION
         positionMission= false;
         showCollectOk = false;
-        if(priority.at(mission).isInside(camera.Position) && !priority.at(mission).getVisited()){
+        if(level.at(mission).isInside(camera.Position) && !level.at(mission).getVisited()){
             positionMission = true;
         }
 
@@ -906,7 +920,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
         if(showCollect){
             showCollect= false;
             showCollectOk = true;
-            priority.at(mission).setVisited(true);
+            level.at(mission).setVisited(true);
             std::cout<<"Missao concluida!";
         }
         std::cout<<"E";
@@ -942,7 +956,7 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
     //std::cout<<camera.Front.x<< " "<< camera.Front.y<< " " <<camera.Front.z<<"\n";
 
     showCollect= false;
-    if(priority.at(mission).isLooking(camera.Front.y) && positionMission && !priority.at(mission).getVisited()){
+    if(level.at(mission).isLooking(camera.Front.y) && positionMission && !level.at(mission).getVisited()){
         showCollect= true;
     }
     if(camera.Front.y>= -0.80)

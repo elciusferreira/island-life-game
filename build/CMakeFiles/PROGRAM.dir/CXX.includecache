@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -1174,7 +1174,7 @@ intrin.h
 arm_neon.h
 -
 
-/home/natan/Documents/Island_Life/island-life-game/src/main.cpp
+/home/elcius/Documentos/github/pessoal/island-life-game/src/main.cpp
 iostream
 -
 map
@@ -1192,13 +1192,13 @@ GL/glut.h
 ft2build.h
 -
 Shader.h
-/home/natan/Documents/Island_Life/island-life-game/src/Shader.h
+/home/elcius/Documentos/github/pessoal/island-life-game/src/Shader.h
 Camera.h
-/home/natan/Documents/Island_Life/island-life-game/src/Camera.h
+/home/elcius/Documentos/github/pessoal/island-life-game/src/Camera.h
 Skybox.h
-/home/natan/Documents/Island_Life/island-life-game/src/Skybox.h
+/home/elcius/Documentos/github/pessoal/island-life-game/src/Skybox.h
 Model.h
-/home/natan/Documents/Island_Life/island-life-game/src/Model.h
+/home/elcius/Documentos/github/pessoal/island-life-game/src/Model.h
 glm/glm.hpp
 -
 glm/gtc/matrix_transform.hpp
@@ -1208,9 +1208,9 @@ glm/gtc/type_ptr.hpp
 SOIL.h
 -
 Itens.h
-/home/natan/Documents/Island_Life/island-life-game/src/Itens.h
+/home/elcius/Documentos/github/pessoal/island-life-game/src/Itens.h
 GameTime.h
-/home/natan/Documents/Island_Life/island-life-game/src/GameTime.h
+/home/elcius/Documentos/github/pessoal/island-life-game/src/GameTime.h
 Sound.h
-/home/natan/Documents/Island_Life/island-life-game/src/Sound.h
+/home/elcius/Documentos/github/pessoal/island-life-game/src/Sound.h
 

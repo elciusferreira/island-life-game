@@ -81,7 +81,7 @@ public:
         float last_x = this->Position.x;
         float last_z = this->Position.y;
         GLfloat velocity = this->MovementSpeed * deltaTime;
-        
+
         if(!testColision.isColisionItens(this->Position)){
             if (direction == FORWARD)
                 this->Position += velocity * this->Front;
@@ -100,7 +100,7 @@ public:
             this->Position -= velocity * this->Front;
         }
 
-        this->Position.y = this->Position.x/7;
+        //this->Position.y = this->Position.x/7;
 
 
             /*if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
