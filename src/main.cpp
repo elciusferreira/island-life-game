@@ -34,7 +34,7 @@
 #include "Sound.h"
 
 // Properties
-GLuint screenWidth = 800, screenHeight = 600;
+GLuint screenWidth = 1280, screenHeight = 720;
 GLfloat theta = 0;
 GLfloat alpha = 0;
 bool enableKey = true;
@@ -70,6 +70,8 @@ bool positionMission = false;
 // GAME TIME
 bool runtime= true;
 int timeGame;
+float positionBoatZ = -0.83f;
+float positionBoatY = -5.0f;
 GameTime gameTime;
 std::string showTime;
 
@@ -342,11 +344,11 @@ skyboxShader.setInt("skybox", 0);
             return 0;
         }
 
-        RenderText(shader, "Enter para iniciar", screenWidth/3, screenHeight/1.1, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
-        RenderText(shader, "Dificuldades:", screenWidth/3, screenHeight/2+20, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
-        RenderText(shader, "1- Facil", screenWidth/3+20, screenHeight/4+120, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
-        RenderText(shader, "2- Medio", screenWidth/3+20, screenHeight/4+80, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
-        RenderText(shader, "3- Dificil", screenWidth/3+20, screenHeight/4+40, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+       
+        RenderText(shader, "Selecione a dificuldade", screenWidth/3-60, screenHeight/2+20, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+        RenderText(shader, "1- Facil - 60s", screenWidth/3+10, screenHeight/4+120, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+        RenderText(shader, "2- Medio - 40s", screenWidth/3+10, screenHeight/4+80, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+        RenderText(shader, "3- Dificil - 20s", screenWidth/3+10, screenHeight/4+40, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
 
         if(KEY == GLFW_KEY_1){
             difficulty = 1;
@@ -413,13 +415,13 @@ skyboxShader.setInt("skybox", 0);
     //SET GAME CONFIGURATION
     switch(difficulty){
         case 1:
-            timeGame = 120;
-            break;
-        case 2:
             timeGame = 60;
             break;
+        case 2:
+            timeGame = 40;
+            break;
         case 3:
-            timeGame = 45;
+            timeGame = 20;
             break;
     }
 
@@ -435,8 +437,8 @@ skyboxShader.setInt("skybox", 0);
             glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             music.setMusic(music.fail, 0);
-            RenderText(shader, "VOCE PERDEU!", screenWidth/3, screenHeight/2, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f)); 
-            RenderText(shader, "Enter para tentar de novo!", screenWidth/3, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));       
+            RenderText(shader, "VOCE ESTA COM DIFICULDADES?", screenWidth/4, screenHeight/2, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f)); 
+            RenderText(shader, "Voce tera mais tempo para sobreviver", screenWidth/3, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));       
 
             if(KEY==GLFW_KEY_ENTER){
                 showGameOver = false;
@@ -446,6 +448,8 @@ skyboxShader.setInt("skybox", 0);
                 for(int i=0; i < level.size(); i++){
                     level.at(i).setVisited(false);
                 }
+                timeGame+= 15;
+                gameTime.setTime(timeGame);
                 gameTime.startTime();
             }
             glDepthFunc(GL_LESS); // set depth function back to default
@@ -522,8 +526,7 @@ skyboxShader.setInt("skybox", 0);
         model_lamp = glm::scale(model_lamp, glm::vec3(2.0f, 2.0f, 2.0f));*/
         //model_lamp = glm::rotate(model_lamp, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
-        model_boat = glm::translate(model_boat, glm::vec3(-13.0f, -6.0f, -0.83f));
-    		model_boat = glm::rotate(model_boat, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        
 
         model_island = glm::translate(model_island, glm::vec3(26.0f, -5.0f, -15.0f));
         model_island = glm::scale(model_island, glm::vec3(0.10f, 0.10f, 0.10f));
@@ -644,13 +647,7 @@ skyboxShader.setInt("skybox", 0);
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
         Bonfire.Draw(lightingShader);
 
-        lightingShader.Use();
-        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_boat));
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
-        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
-        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
-        Boat.Draw(lightingShader);
+
 
         lightingShader.Use();
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_skeleton));
@@ -763,14 +760,15 @@ skyboxShader.setInt("skybox", 0);
         // GAME INTRO
         if(showMessageStart){
             if(!canInteractStart){
-                message = "Nao e tadeu!!";
-                RenderText(shader, message, screenWidth/4, screenHeight/4, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                message = "Procure o Anciao da ilha";
+                RenderText(shader, message, screenWidth/3, screenHeight/4, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
             }
             else{
                 //music.setMusic(music.begin);
-                RenderText(shader, "Eu sou o grande Tadeu", screenWidth/3, screenHeight/4, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                RenderText(shader, "Se quiser sobreviver, siga minhas instrucoes", screenWidth/4, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
-                RenderText(shader, "Pressione Y para aceitar!", screenWidth/2, screenHeight/6, 0.2f, glm::vec3(1.0f, 1.0f, 1.0f));
+                RenderText(shader, "Eu sou o Anciao", screenWidth/4, screenHeight/5+60, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                RenderText(shader, "Voce naufragou, alguns outros ja vieram aqui, mas nao sobreviveram...", screenWidth/4, screenHeight/5+40, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                RenderText(shader, "Irei te ajudar, porem testarei sua bravura!", screenWidth/4, screenHeight/5+20, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                RenderText(shader, "Pressione Y para aceitar!", screenWidth/4, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
             }
         }
         // GAME START
@@ -784,25 +782,26 @@ skyboxShader.setInt("skybox", 0);
             switch(mission){
                 case 1:
                     if(showDialogTadeu){
-                        RenderText(shader, "Bela decisão, jovem!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                        RenderText(shader, "Vamos lhe tirar daqui, me escute!", screenWidth/4, screenHeight/3, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
-                        RenderText(shader, "Me traga MADEIRA!!!", screenWidth/2, screenHeight/4, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "Sabia decisao!", screenWidth/4, screenHeight/5+40, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "Vamos construir um pequeno barco.", screenWidth/4, screenHeight/5+20, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "Sua primeira tarefa sera procurar e me trazer madeira!", screenWidth/4, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
                     }
 
                     break;
 
                 case 2:
                     if(showDialogTadeu){
-                        RenderText(shader, "Bom garoto!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                        RenderText(shader, "Agora, me traga uma corda!", screenWidth/2, screenHeight/3, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                    }
+                        RenderText(shader, "Excelente!", screenWidth/4, screenHeight/5+40, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "Preciso de cordas.", screenWidth/4, screenHeight/5+20, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "Procure algumas pela ilha e me traga", screenWidth/4, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                     }
                     break;
 
                 case 3:
                     if(showDialogTadeu){
-                        RenderText(shader, "Boa jovem!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                        RenderText(shader, "Agora, procure algo pra comer!", screenWidth/3, screenHeight/3, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                        RenderText(shader, "Enquanto eu faço a magica!!", screenWidth/3, screenHeight/4, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "Quase la!", screenWidth/4, screenHeight/5+40, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "Seu barco esta pronto!", screenWidth/4, screenHeight/5+20, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        RenderText(shader, "Como recompensa, quero que me traga alimentos frescos!", screenWidth/4, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
                     }
                     break;
 
@@ -810,8 +809,32 @@ skyboxShader.setInt("skybox", 0);
                     if(showDialogTadeu){
                         gameTime.setEndGame(true);
                         music.setMusic(music.success, 0);
-                        RenderText(shader, "VOCE SOBREVIVEU!", screenWidth/2, screenHeight/2, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                        camera.Position.x = camera.Position.x - 0.1;
+                        RenderText(shader, "Voce venceu!", screenWidth/4, screenHeight/5+40, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                        positionBoatZ = positionBoatZ + 0.01;
+
+                        camera.Position.z = positionBoatZ -0.2;
+                        //camera.Position.y = 0.0f;
+                        camera.Position.x = -11.0f;
+
+                        if(camera.Position.z >= -1 && camera.Position.z < 50){
+                            positionBoatY = positionBoatY + 0.001;
+                            camera.Position.y += 0.0001f;
+                            camera.Position.z += 0.01f;
+                        }
+
+                        
+
+
+                        model_boat = glm::translate(model_boat, glm::vec3(-13.0f, positionBoatY, positionBoatZ));
+                        model_boat = glm::rotate(model_boat, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+
+                        lightingShader.Use();
+                        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_boat));
+                        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+                        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+                        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+                        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+                        Boat.Draw(lightingShader);
                     }
                     break;
 
@@ -821,8 +844,6 @@ skyboxShader.setInt("skybox", 0);
 
             }
         }
-
-
 
     // draw skybox as last
     glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content

@@ -100,7 +100,7 @@ public:
             this->Position -= velocity * this->Front;
         }
 
-        //this->Position.y = this->Position.x/7;
+        this->Position.y = this->Position.x/7;
 
 
             /*if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
