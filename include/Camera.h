@@ -42,7 +42,6 @@ public:
     glm::vec3 Up;
     glm::vec3 Right;
     glm::vec3 WorldUp;
-    // Eular Angles
     GLfloat Yaw;
     GLfloat Pitch;
     // Camera options
@@ -85,35 +84,18 @@ public:
         if(!testColision.isColisionItens(this->Position)){
             if (direction == FORWARD)
                 this->Position += velocity * this->Front;
-                //this->Position += glm::normalize(glm::rotate(this->Front, glm::radians(this->Pitch), -this->Right)) * velocity;
             if (direction == BACKWARD)
                 this->Position -= velocity * this->Front;
-                //this->Position -= glm::normalize(glm::rotate(this->Front, glm::radians(this->Pitch), -this->Right)) * velocity;
             if (direction == LEFT)
                 this->Position -= glm::normalize(glm::cross(this->Front, this->Up)) * velocity;
-                //this->Position -= this->Right * velocity;
             if (direction == RIGHT)
                 this->Position += glm::normalize(glm::cross(this->Front, this->Up)) * velocity;
-                //this->Position += this->Right * velocity;
         }
         else{
             this->Position -= velocity * this->Front;
         }
 
         this->Position.y = this->Position.x/7;
-
-
-            /*if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-                cameraPos += cameraSpeed * cameraFront;
-            if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-                cameraPos -= cameraSpeed * cameraFront;
-            if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-                cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-            if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-                cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;*/
-
-      //  this->Position.y += offsetY;
-
         MapCoords();
     }
 

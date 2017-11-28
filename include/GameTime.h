@@ -34,8 +34,8 @@ public:
 		 remaining = MAXTIME - elapsed_secs;
 
 		 buff << remaining;
-		
-		 return "Tempo restante " + buff.str();
+
+		 return "Remainig time " + buff.str();
 	}
 
 	bool isFinishTime(){

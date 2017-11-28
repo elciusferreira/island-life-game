@@ -25,11 +25,9 @@ public:
 		for(int i=0; i< objects.size(); i++){
 			if((objects.at(i).x - boxrange) <= camera.x && (objects.at(i).x + boxrange) >= camera.x
                 && (objects.at(i).z  - boxrange) <= camera.z && (objects.at(i).z + boxrange) >= camera.z ){
-	            return true; 
-	            //std::cout<<"-----------------> BATEU!!!\n";	         
+	            return true;
        		}
 		}
-		//std::cout<<"NAO BATEU!!!\n";
         return false;
 	}
 

@@ -1,3 +1,0 @@
-/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/edit_cache.dir
-/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/rebuild_cache.dir
-/home/elcius/Documentos/github/pessoal/island-life-game/build/CMakeFiles/PROGRAM.dir
