@@ -1,5 +1,5 @@
 #include <SFML/Audio.hpp>
-#include <thread>  
+#include <thread>
 #include <iostream>
 
 extern bool canSetMusic = false;
@@ -24,7 +24,6 @@ void controlPlayer(){
 }
 
 class Sound{
-private:
 
 public:
 	const std::string begin = "resources/sounds/begin.wav";
@@ -46,4 +45,3 @@ public:
 	}
 
 };
-

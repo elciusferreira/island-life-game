@@ -34,7 +34,7 @@
 #include "Sound.h"
 
 // Properties
-GLuint screenWidth = 1280, screenHeight = 720;
+GLuint screenWidth = 1366, screenHeight = 800;
 GLfloat theta = 0;
 GLfloat alpha = 0;
 bool enableKey = true;
@@ -344,11 +344,11 @@ skyboxShader.setInt("skybox", 0);
             return 0;
         }
 
-       
-        RenderText(shader, "Selecione a dificuldade", screenWidth/3-60, screenHeight/2+20, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
-        RenderText(shader, "1- Facil - 60s", screenWidth/3+10, screenHeight/4+120, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
-        RenderText(shader, "2- Medio - 40s", screenWidth/3+10, screenHeight/4+80, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
-        RenderText(shader, "3- Dificil - 20s", screenWidth/3+10, screenHeight/4+40, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+
+        RenderText(shader, "Selecione a dificuldade", screenWidth/3, screenHeight/2+20, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+        RenderText(shader, "1- Facil - 60s", screenWidth/3+70, screenHeight/4+120, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+        RenderText(shader, "2- Medio - 40s", screenWidth/3+70, screenHeight/4+80, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+        RenderText(shader, "3- Dificil - 20s", screenWidth/3+70, screenHeight/4+40, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
 
         if(KEY == GLFW_KEY_1){
             difficulty = 1;
@@ -368,7 +368,7 @@ skyboxShader.setInt("skybox", 0);
             glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             //music.setMusic(music.loading);
-            RenderText(shader, "Carregando...", screenWidth/3, screenHeight/2, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+            RenderText(shader, "Carregando...", screenWidth/3 + 60, screenHeight/2, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
 
         }
 
@@ -437,8 +437,8 @@ skyboxShader.setInt("skybox", 0);
             glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             music.setMusic(music.fail, 0);
-            RenderText(shader, "VOCE ESTA COM DIFICULDADES?", screenWidth/4, screenHeight/2, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f)); 
-            RenderText(shader, "Voce tera mais tempo para sobreviver", screenWidth/3, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));       
+            RenderText(shader, "VOCE ESTA COM DIFICULDADES?", screenWidth/4, screenHeight/2, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
+            RenderText(shader, "Voce tera mais tempo para sobreviver", screenWidth/3, screenHeight/5, 0.3f, glm::vec3(1.0f, 1.0f, 1.0f));
 
             if(KEY==GLFW_KEY_ENTER){
                 showGameOver = false;
@@ -458,7 +458,7 @@ skyboxShader.setInt("skybox", 0);
             glfwSwapBuffers(window);
             continue;
         }
-        
+
 
         // Set frame time
         GLfloat currentFrame = glfwGetTime();
@@ -526,7 +526,7 @@ skyboxShader.setInt("skybox", 0);
         model_lamp = glm::scale(model_lamp, glm::vec3(2.0f, 2.0f, 2.0f));*/
         //model_lamp = glm::rotate(model_lamp, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
-        
+
 
         model_island = glm::translate(model_island, glm::vec3(26.0f, -5.0f, -15.0f));
         model_island = glm::scale(model_island, glm::vec3(0.10f, 0.10f, 0.10f));
@@ -751,7 +751,7 @@ skyboxShader.setInt("skybox", 0);
                 showGameOver = true;
             }
             else{
-                RenderText(shader, gameTime.getTime(), screenWidth/3, screenHeight/1.1, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f)); 
+                RenderText(shader, gameTime.getTime(), screenWidth/3, screenHeight/1.1, 0.8f, glm::vec3(1.0f, 1.0f, 1.0f));
                 music.setMusic(music.game, 31);
 
             }
@@ -822,7 +822,7 @@ skyboxShader.setInt("skybox", 0);
                             camera.Position.z += 0.01f;
                         }
 
-                        
+
 
 
                         model_boat = glm::translate(model_boat, glm::vec3(-13.0f, positionBoatY, positionBoatZ));
