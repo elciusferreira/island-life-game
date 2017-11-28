@@ -806,36 +806,32 @@ skyboxShader.setInt("skybox", 0);
                     break;
 
                 case 4:
-                    if(showDialogTadeu){
-                        gameTime.setEndGame(true);
-                        music.setMusic(music.success, 0);
-                        RenderText(shader, "Voce venceu!", screenWidth/4, screenHeight/5+40, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
-                        positionBoatZ = positionBoatZ + 0.01;
+                    gameTime.setEndGame(true);
+                    music.setMusic(music.success, 0);
+                    RenderText(shader, "Voce venceu!", screenWidth/4, screenHeight/5+40, 0.5f, glm::vec3(1.0f, 1.0f, 1.0f));
+                    positionBoatZ = positionBoatZ + 0.01;
 
-                        camera.Position.z = positionBoatZ -0.2;
-                        //camera.Position.y = 0.0f;
-                        camera.Position.x = -11.0f;
+                    camera.Position.z = positionBoatZ -0.2;
+                    camera.Position.y = 0.5f;
+                    camera.Position.x = -11.0f;
 
-                        if(camera.Position.z >= -1 && camera.Position.z < 50){
-                            positionBoatY = positionBoatY + 0.001;
-                            camera.Position.y += 0.0001f;
-                            camera.Position.z += 0.01f;
-                        }
-
-                        
-
-
-                        model_boat = glm::translate(model_boat, glm::vec3(-13.0f, positionBoatY, positionBoatZ));
-                        model_boat = glm::rotate(model_boat, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-
-                        lightingShader.Use();
-                        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_boat));
-                        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
-                        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
-                        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
-                        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
-                        Boat.Draw(lightingShader);
+                    if(camera.Position.z >= -1 && camera.Position.z < 50){
+                        positionBoatY = positionBoatY + 0.0001;
+                        camera.Position.y += 0.0001f;
+                        camera.Position.z += 0.01f;
                     }
+
+                    model_boat = glm::translate(model_boat, glm::vec3(-13.0f, positionBoatY, positionBoatZ));
+                    model_boat = glm::rotate(model_boat, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+
+                    lightingShader.Use();
+                    glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model_boat));
+                    glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.2f, 0.2f, 0.25f);
+                    glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.2f, 0.3f, 0.4f);
+                    glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.3f, 0.3f, 0.35f);
+                    glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+                    Boat.Draw(lightingShader);
+                
                     break;
 
                 default:
@@ -882,15 +878,16 @@ void Do_Movement()
         }
 
         // Camera controls
-        if(keys[GLFW_KEY_W])
-            camera.ProcessKeyboard(FORWARD, deltaTime, offsetY);
-        if(keys[GLFW_KEY_S])
-            camera.ProcessKeyboard(BACKWARD, deltaTime, offsetY);
-        if(keys[GLFW_KEY_A])
-            camera.ProcessKeyboard(LEFT, deltaTime, offsetY);
-        if(keys[GLFW_KEY_D])
-            camera.ProcessKeyboard(RIGHT, deltaTime, offsetY);
-
+        if(mission!=4){
+            if(keys[GLFW_KEY_W])
+                camera.ProcessKeyboard(FORWARD, deltaTime, offsetY);
+            if(keys[GLFW_KEY_S])
+                camera.ProcessKeyboard(BACKWARD, deltaTime, offsetY);
+            if(keys[GLFW_KEY_A])
+                camera.ProcessKeyboard(LEFT, deltaTime, offsetY);
+            if(keys[GLFW_KEY_D])
+                camera.ProcessKeyboard(RIGHT, deltaTime, offsetY);
+        }
 
         // TALK WITH TADEU
         canInteractStart = false;

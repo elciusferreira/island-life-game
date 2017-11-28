@@ -33,10 +33,10 @@ CMAKE_COLOR_MAKEFILE:BOOL=ON
 CMAKE_CXX_COMPILER:UNINITIALIZED=/usr/bin/clang++-3.8
 
 //LLVM archiver
-CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/lib/llvm-3.8/bin/llvm-ar
+CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/llvm-ar-3.8
 
 //Generate index for LLVM archive
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/lib/llvm-3.8/bin/llvm-ranlib
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/llvm-ranlib-3.8
 
 //Flags used by the compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -58,10 +58,10 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 CMAKE_C_COMPILER:UNINITIALIZED=/usr/bin/clang-3.8
 
 //LLVM archiver
-CMAKE_C_COMPILER_AR:FILEPATH=/usr/lib/llvm-3.8/bin/llvm-ar
+CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/llvm-ar-3.8
 
 //Generate index for LLVM archive
-CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/lib/llvm-3.8/bin/llvm-ranlib
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/llvm-ranlib-3.8
 
 //Flags used by the compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -418,7 +418,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=9
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=5
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
